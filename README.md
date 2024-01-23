@@ -1,4 +1,4 @@
-# 44643Sec04Team09Spring2024FinalProject
+# 44643Sec04Team08Spring2024FinalProject
 
 Roles and Responsibilities :
 1. Rakesh Somanaboina: Responsible for back end development which includes programming, implentation of APIs, Authentication and data security.
