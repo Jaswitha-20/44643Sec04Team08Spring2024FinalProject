@@ -13,14 +13,24 @@ class EasyEvents: UIViewController {
         didSet{
             LaunchLAV.animation = LottieAnimation.named("event")
             LaunchLAV.alpha = 1
-            LaunchLAV.play()
-            LaunchLAV.loopMode = .loop
+            LaunchLAV.play{ [weak self] _ in
+                UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1.0, delay: 0.0, options: [.curveEaseInOut]){
+                    self?.LaunchLAV.alpha = 0.0
+                }
+            }
         }
     }
     
+    @IBOutlet weak var WelcomeTV: UITextView!
+    
+    @IBAction func getStartWelcome(_ sender: UIButton) {
+        // logic to navigate to login page
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.WelcomeTV.text = "Every Event is Made Easy through EasyEvents "
         // Do any additional setup after loading the view.
     }
     
