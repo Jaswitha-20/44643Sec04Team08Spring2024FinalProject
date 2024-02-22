@@ -18,6 +18,7 @@
 		7CA391522B866EA500A24FE5 /* EasyEventsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA391512B866EA500A24FE5 /* EasyEventsUITestsLaunchTests.swift */; };
 		7CA3915F2B86701400A24FE5 /* EasyEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3915E2B86701400A24FE5 /* EasyEvents.swift */; };
 		7CA391622B8670B000A24FE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7CA391612B8670B000A24FE5 /* Lottie */; };
+		869FA3742B88056700E59550 /* AnimatedGradientView in Frameworks */ = {isa = PBXBuildFile; productRef = 869FA3732B88056700E59550 /* AnimatedGradientView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				869FA3742B88056700E59550 /* AnimatedGradientView in Frameworks */,
 				7CA391622B8670B000A24FE5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +152,7 @@
 			name = EasyEvents;
 			packageProductDependencies = (
 				7CA391612B8670B000A24FE5 /* Lottie */,
+				869FA3732B88056700E59550 /* AnimatedGradientView */,
 			);
 			productName = EasyEvents;
 			productReference = 7CA3912B2B866EA300A24FE5 /* EasyEvents.app */;
@@ -225,6 +228,7 @@
 			mainGroup = 7CA391222B866EA300A24FE5;
 			packageReferences = (
 				7CA391602B8670B000A24FE5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				869FA3722B88056700E59550 /* XCRemoteSwiftPackageReference "AnimatedGradientView" */,
 			);
 			productRefGroup = 7CA3912C2B866EA300A24FE5 /* Products */;
 			projectDirPath = "";
@@ -623,6 +627,14 @@
 				minimumVersion = 4.4.0;
 			};
 		};
+		869FA3722B88056700E59550 /* XCRemoteSwiftPackageReference "AnimatedGradientView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rwbutler/AnimatedGradientView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -630,6 +642,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7CA391602B8670B000A24FE5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		869FA3732B88056700E59550 /* AnimatedGradientView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 869FA3722B88056700E59550 /* XCRemoteSwiftPackageReference "AnimatedGradientView" */;
+			productName = AnimatedGradientView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

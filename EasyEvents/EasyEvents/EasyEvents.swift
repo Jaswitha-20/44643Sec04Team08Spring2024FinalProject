@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import AnimatedGradientView
 class EasyEvents: UIViewController {
     
     @IBOutlet weak var LaunchLAV: LottieAnimationView!{
@@ -30,7 +31,15 @@ class EasyEvents: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.WelcomeTV.text = "Every Event is Made Easy through EasyEvents "
+        
+        let animatedGradient = AnimatedGradientView(frame: view.bounds)
+        animatedGradient.direction = .up
+        animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
+        (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),
+        (colors: ["#003973", "#E5E5BE"], .down, .axial),
+        (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+        view.addSubview(animatedGradient)
+        view.sendSubviewToBack(animatedGradient)
         // Do any additional setup after loading the view.
     }
     
