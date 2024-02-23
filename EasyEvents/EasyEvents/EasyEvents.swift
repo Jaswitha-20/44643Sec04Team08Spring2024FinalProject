@@ -8,6 +8,8 @@
 import UIKit
 import Lottie
 import AnimatedGradientView
+import AVFoundation
+
 class EasyEvents: UIViewController {
     
     @IBOutlet weak var LaunchLAV: LottieAnimationView!{
@@ -26,6 +28,7 @@ class EasyEvents: UIViewController {
     
     @IBAction func getStartWelcome(_ sender: UIButton) {
         // logic to navigate to login page
+        AudioServicesPlaySystemSound(1103)
     }
     
     
