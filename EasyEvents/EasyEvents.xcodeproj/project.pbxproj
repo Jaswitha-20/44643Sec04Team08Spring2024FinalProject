@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C7265852B890E9D00AD6BD5 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7265842B890E9D00AD6BD5 /* Storyboard.storyboard */; };
 		7CA3912F2B866EA300A24FE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */; };
 		7CA391312B866EA300A24FE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA391302B866EA300A24FE5 /* SceneDelegate.swift */; };
 		7CA391332B866EA300A24FE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA391322B866EA300A24FE5 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C7265842B890E9D00AD6BD5 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		7CA3912B2B866EA300A24FE5 /* EasyEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CA391302B866EA300A24FE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				7CA391322B866EA300A24FE5 /* ViewController.swift */,
 				7CA391342B866EA300A24FE5 /* Main.storyboard */,
 				7CA3915E2B86701400A24FE5 /* EasyEvents.swift */,
+				7C7265842B890E9D00AD6BD5 /* Storyboard.storyboard */,
 				7CA391372B866EA500A24FE5 /* Assets.xcassets */,
 				7CA391392B866EA500A24FE5 /* LaunchScreen.storyboard */,
 				7CA3913C2B866EA500A24FE5 /* Info.plist */,
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CA3913B2B866EA500A24FE5 /* LaunchScreen.storyboard in Resources */,
+				7C7265852B890E9D00AD6BD5 /* Storyboard.storyboard in Resources */,
 				7CA391382B866EA500A24FE5 /* Assets.xcassets in Resources */,
 				7CA391362B866EA300A24FE5 /* Main.storyboard in Resources */,
 			);

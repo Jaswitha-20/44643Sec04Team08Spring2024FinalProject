@@ -31,7 +31,7 @@ class EasyEvents: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.WelcomeTV.text = "Every Event is Made Easy through EasyEvents"
+        self.WelcomeTV.text = "Every Event is Made Easy through Easy Events"
         self.WelcomeTV.layer.borderColor = UIColor.black.cgColor
         self.WelcomeTV.layer.borderWidth = 5.0
         self.WelcomeTV.layer.cornerRadius = 5.0
