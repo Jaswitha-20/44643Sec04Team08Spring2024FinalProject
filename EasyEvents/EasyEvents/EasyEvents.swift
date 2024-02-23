@@ -31,13 +31,14 @@ class EasyEvents: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.WelcomeTV.text = "Every Event is Made Easy through EasyEvents"
         
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
         animatedGradient.direction = .up
-        animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
-        (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),
-        (colors: ["#003973", "#E5E5BE"], .down, .axial),
-        (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+        animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
+                                            (colors: ["#F5A9D0", "#2ECCFA", "#BEF781"], .right, .axial),
+                                            (colors: ["#ECE0F8", "#819FF7"], .down, .axial),
+                                            (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
         view.addSubview(animatedGradient)
         view.sendSubviewToBack(animatedGradient)
         // Do any additional setup after loading the view.
@@ -55,3 +56,6 @@ class EasyEvents: UIViewController {
      */
     
 }
+//#Preview("EasyEvents"){
+//    UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+//}

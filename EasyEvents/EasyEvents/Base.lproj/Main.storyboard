@@ -21,21 +21,23 @@
                                 <rect key="frame" x="10" y="69" width="373" height="739"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lE-E7-oUz">
-                                        <rect key="frame" x="99.000000000000014" y="0.0" width="175.33333333333337" height="220.33333333333334"/>
+                                        <rect key="frame" x="98.333333333333329" y="0.0" width="176.33333333333337" height="147.66666666666666"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" systemColor="systemGray3Color"/>
+                                        <size key="shadowOffset" width="1" height="-1"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="493-Xm-DGA" userLabel="WelcomeTV">
-                                        <rect key="frame" x="74.666666666666671" y="228.33333333333329" width="223.66666666666663" height="443.66666666666674"/>
+                                        <rect key="frame" x="74.666666666666671" y="155.66666666666669" width="223.66666666666663" height="517.33333333333326"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7T-Gn-Zz1">
-                                        <rect key="frame" x="112" y="680" width="149" height="59"/>
+                                        <rect key="frame" x="112" y="681" width="149" height="58"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Get Started" cornerStyle="capsule"/>
                                         <connections>
@@ -47,7 +49,8 @@
                                     <constraint firstItem="493-Xm-DGA" firstAttribute="width" secondItem="Itp-s5-48a" secondAttribute="width" multiplier="0.6" id="U38-bu-gNH"/>
                                     <constraint firstItem="h7T-Gn-Zz1" firstAttribute="width" secondItem="Itp-s5-48a" secondAttribute="width" multiplier="0.4" id="a0f-d8-L19"/>
                                     <constraint firstItem="h7T-Gn-Zz1" firstAttribute="height" secondItem="Itp-s5-48a" secondAttribute="height" multiplier="0.08" id="hbo-RD-YBX"/>
-                                    <constraint firstItem="493-Xm-DGA" firstAttribute="height" secondItem="Itp-s5-48a" secondAttribute="height" multiplier="0.6" id="ogT-NA-CHd"/>
+                                    <constraint firstItem="1lE-E7-oUz" firstAttribute="height" secondItem="Itp-s5-48a" secondAttribute="height" multiplier="0.2" id="iV6-Vj-VkY"/>
+                                    <constraint firstItem="493-Xm-DGA" firstAttribute="height" secondItem="Itp-s5-48a" secondAttribute="height" multiplier="0.7" id="ogT-NA-CHd"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJC-uf-BeW" userLabel="LaunchLAV" customClass="LottieAnimationView" customModule="Lottie">
@@ -84,6 +87,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
