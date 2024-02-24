@@ -45,3 +45,20 @@ After pressing the “Book Now” button, it will redirect to the booking page a
 
 6.	Booking Confirmation:
 After clicking on the “Confirm Booking” button , your booking will be confirmed with the particular event organizing team and a confirmation mail will be sent to your registered email.
+
+### Initial Developement for Screen 1 and 2
+
+##  Created Screen 1 
+     Added UI Elements and contstraints 
+     Added lottie animation
+     Included Audio PlayServices
+     Added Animated Gradient view
+     Added Outlets and Actions for appropriate UI Elments for Screen 1
+
+## Created Screen 2
+     Added UI Elements and Contstraints 
+     Included Audio Play System Services
+     Added Animated gradient view
+     Added outlets and actions for appropriate UI Elements for Screen 2
+
+     
