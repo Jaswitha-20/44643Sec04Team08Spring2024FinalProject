@@ -7,6 +7,7 @@
 
 import UIKit
 import AnimatedGradientView
+import AVFoundation
 
 class loginVC: UIViewController {
 
@@ -28,8 +29,10 @@ class loginVC: UIViewController {
     }
     
     @IBAction func onLogin(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1103)
     }
     @IBAction func onSignUp(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1103)
     }
     
     /*
