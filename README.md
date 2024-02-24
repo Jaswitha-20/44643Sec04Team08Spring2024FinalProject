@@ -60,5 +60,5 @@ After clicking on the “Confirm Booking” button , your booking will be confir
      Included Audio Play System Services
      Added Animated gradient view
      Added outlets and actions for appropriate UI Elements for Screen 2
-
+Created navigation from screen 1 to screen 2
      
