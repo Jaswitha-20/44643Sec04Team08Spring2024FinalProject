@@ -60,6 +60,9 @@
                                                         <rect key="frame" x="44.000000000000007" y="188" width="65.666666666666686" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                                        <connections>
+                                                            <action selector="onLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7gp-Ar-DV5"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z8-2K-ulT">
                                                         <rect key="frame" x="9" y="245.33333333333331" width="136" height="20.333333333333314"/>
@@ -86,6 +89,9 @@
                                                         <rect key="frame" x="49.666666666666664" y="38.333333333333371" width="79.666666666666686" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="SignUp"/>
+                                                        <connections>
+                                                            <action selector="onSignUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LJd-f4-J5A"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -113,6 +119,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="uch-iy-KUt" secondAttribute="bottom" constant="3.6666666666666288" id="xOt-ED-jNz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="U65-4V-xis" id="KRB-wn-ehP"/>
+                        <outlet property="passwordTF" destination="hA5-rO-2Ju" id="cyG-wC-8FS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -6,16 +6,32 @@
 //
 
 import UIKit
+import AnimatedGradientView
 
 class loginVC: UIViewController {
 
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let animatedGradient = AnimatedGradientView(frame: view.bounds)
+        animatedGradient.direction = .up
+        animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
+                                            (colors: ["#F5A9D0", "#2ECCFA", "#BEF781"], .right, .axial),
+                                            (colors: ["#ECE0F8", "#819FF7"], .down, .axial),
+                                            (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
+        view.addSubview(animatedGradient)
+        view.sendSubviewToBack(animatedGradient)
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onLogin(_ sender: UIButton) {
+    }
+    @IBAction func onSignUp(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
