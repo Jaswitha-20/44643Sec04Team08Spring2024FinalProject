@@ -34,25 +34,26 @@ class LOGINViewController: UIViewController {
     @IBAction func onLogin(_ sender: UIButton) {
         
         AudioServicesPlaySystemSound(1103)
-               if(validateEmail(givenEmail: emailTF.text) && validatePassword(givenPassword: passwordTF.text)){
                    // verify the users email and password with database datadf
                    if(emailTF.text == "admin@gmail.com" && passwordTF.text == "password"){
                        // navigate to the main view after succesful login
                      //  self.performSegue(withIdentifier: loginNext, sender: self)
                    }
-               }
     }
     
-    @IBOutlet weak var passwordValidationLBL: UILabel!
     @IBAction func passwordAction(_ sender: UITextField) {
     }
     @IBOutlet weak var forgotBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     
+    @IBOutlet weak var passwordValidationTV: UITextView!
     @IBOutlet weak var emailValidationLBL: UILabel!
     @IBOutlet weak var passwordTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.passwordTF.isEnabled = false
+        self.loginBtn.isEnabled = false
+        self.passwordValidationTV.isEditable = false
         
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
                 animatedGradient.direction = .up
@@ -66,6 +67,20 @@ class LOGINViewController: UIViewController {
        
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func verifyEmail(_ sender: UITextField) {
+        if(validateEmail(givenEmail: self.emailTF.text)){
+            self.emailValidationLBL.text = ""
+            self.passwordTF.isEnabled = true
+        }
+    }
+    
+    @IBAction func verifyPassword(_ sender: UITextField) {
+        if(validatePassword(givenPassword: self.passwordTF.text)){
+            self.passwordValidationTV.text = ""
+            self.loginBtn.isEnabled = true
+        }
     }
     
     func validateEmail(givenEmail :String?)-> Bool{
@@ -85,32 +100,33 @@ class LOGINViewController: UIViewController {
        
        func validatePassword(givenPassword: String?) -> Bool {
            guard let password = givenPassword , !password.isEmpty else {
-                       self.passwordValidationLBL.text = "Please enter the password"
-                       self.passwordValidationLBL.textColor = UIColor.red
+                       self.passwordValidationTV.text = "Please enter the password"
+                       self.passwordValidationTV.textColor = UIColor.red
                        return false
                    }
            var messages: [String] = []
            messages.append("Password must contain at least")
 
            if !password.contains(where: { $0.isUppercase }) {
-               messages.append(" one capital letter.")
+               messages.append("\n     • one capital letter")
            }
            
            if !password.contains(where: { $0.isNumber }) {
-               messages.append(", one digit.")
+               messages.append("\n     • one digit.")
            }
            
            if !password.contains(where: { !$0.isLetter && !$0.isNumber }) {
-               messages.append(", special character.")
+               messages.append("\n     • special character.")
            }
 
            if password.count < 8 {
-               messages.append(", 8 characters long.")
+               messages.append("\n     • 8 characters long.")
            }
            
            if(messages.count > 1){
-               self.passwordValidationLBL.text = messages.joined(separator: "")
-               self.passwordValidationLBL.textColor = UIColor.red
+               self.passwordValidationTV.text = messages.joined(separator: "")
+               self.passwordValidationTV.textColor = UIColor.red
+               
                return false
            }
 
