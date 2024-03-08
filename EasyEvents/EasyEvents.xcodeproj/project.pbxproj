@@ -20,6 +20,7 @@
 		7CA3915F2B86701400A24FE5 /* EasyEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3915E2B86701400A24FE5 /* EasyEvents.swift */; };
 		7CA391622B8670B000A24FE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7CA391612B8670B000A24FE5 /* Lottie */; };
 		869FA3742B88056700E59550 /* AnimatedGradientView in Frameworks */ = {isa = PBXBuildFile; productRef = 869FA3732B88056700E59550 /* AnimatedGradientView */; };
+		B0BBEA822B9A9054005A2765 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBEA812B9A9054005A2765 /* SignUpVC.swift */; };
 		FBA34F762B896BC60077A1D7 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA34F752B896BC60077A1D7 /* loginVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		7CA3914F2B866EA500A24FE5 /* EasyEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEventsUITests.swift; sourceTree = "<group>"; };
 		7CA391512B866EA500A24FE5 /* EasyEventsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEventsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7CA3915E2B86701400A24FE5 /* EasyEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEvents.swift; sourceTree = "<group>"; };
+		B0BBEA812B9A9054005A2765 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		FBA34F752B896BC60077A1D7 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				7CA391302B866EA300A24FE5 /* SceneDelegate.swift */,
 				7CA391322B866EA300A24FE5 /* ViewController.swift */,
 				7CA391342B866EA300A24FE5 /* Main.storyboard */,
+				B0BBEA812B9A9054005A2765 /* SignUpVC.swift */,
 				FBA34F752B896BC60077A1D7 /* loginVC.swift */,
 				7CA3915E2B86701400A24FE5 /* EasyEvents.swift */,
 				7C7265842B890E9D00AD6BD5 /* login.storyboard */,
@@ -284,6 +287,7 @@
 				FBA34F762B896BC60077A1D7 /* loginVC.swift in Sources */,
 				7CA3912F2B866EA300A24FE5 /* AppDelegate.swift in Sources */,
 				7CA3915F2B86701400A24FE5 /* EasyEvents.swift in Sources */,
+				B0BBEA822B9A9054005A2765 /* SignUpVC.swift in Sources */,
 				7CA391312B866EA300A24FE5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

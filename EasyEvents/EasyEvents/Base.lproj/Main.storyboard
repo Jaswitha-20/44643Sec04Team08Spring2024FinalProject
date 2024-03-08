@@ -104,16 +104,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ckh-bx-ca3" userLabel="BigContainerSV">
-                                <rect key="frame" x="20" y="123" width="353" height="675"/>
+                                <rect key="frame" x="20" y="123" width="353" height="608.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYB-id-edL">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="135"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="121.66666666666667"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="J4n-ar-L2T" userLabel="login">
-                                        <rect key="frame" x="0.0" y="143" width="353" height="356"/>
+                                        <rect key="frame" x="0.0" y="129.66666666666663" width="353" height="356"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCo-cB-5nq">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
@@ -157,14 +157,14 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWu-UB-SGO">
-                                        <rect key="frame" x="0.0" y="506.99999999999994" width="353" height="83.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="493.66666666666663" width="353" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot Password?">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3cK-46-vKp" userLabel="SignUp">
-                                        <rect key="frame" x="0.0" y="598.33333333333337" width="353" height="76.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="531.66666666666663" width="353" height="76.666666666666629"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plx-oU-wbE">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
@@ -173,7 +173,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnT-s0-myl">
-                                                <rect key="frame" x="0.0" y="42.333333333333258" width="353" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="42.333333333333371" width="353" height="34.333333333333343"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="N6B-Ne-LFm"/>
                                                     <constraint firstAttribute="height" constant="304" id="esu-iF-Sfj"/>
@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="-654" y="-673"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="DDj-D4-I6k">
             <objects>
-                <viewController id="k91-uD-H8c" sceneMemberID="viewController">
+                <viewController id="k91-uD-H8c" customClass="SignUpVC" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wcl-Sh-TN2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,6 +280,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create Account"/>
                                 <connections>
+                                    <action selector="createAccount:" destination="k91-uD-H8c" eventType="touchUpInside" id="owc-10-YkD"/>
                                     <segue destination="VBp-ye-2bS" kind="show" id="sf5-ft-wqU"/>
                                 </connections>
                             </button>
@@ -295,7 +296,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-Og-1Hi">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-Og-1Hi" userLabel="ConfirmPsd">
                                 <rect key="frame" x="45" y="451" width="256" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -324,6 +325,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="0qk-WQ-cxx"/>
+                    <connections>
+                        <outlet property="confirmPsd" destination="nzu-Og-1Hi" id="I0j-MF-4Rh"/>
+                        <outlet property="confirmPwd" destination="4N9-r0-dfp" id="h6X-MR-jCT"/>
+                        <outlet property="contactInfo" destination="Q4k-X1-Iu0" id="14n-a1-JcH"/>
+                        <outlet property="createAcc" destination="kV4-gT-KO1" id="fBw-9Q-H6g"/>
+                        <outlet property="email" destination="sPo-5d-e0h" id="cfL-sC-XCi"/>
+                        <outlet property="firstName" destination="YrE-Mp-kaV" id="HdN-Nn-PZZ"/>
+                        <outlet property="lastName" destination="dbC-lv-nWE" id="YLS-rb-xcw"/>
+                        <outlet property="password" destination="LfO-Cn-bw4" id="Epv-Pg-obc"/>
+                        <outlet property="passwordEnter" destination="qbl-UL-lG1" id="4EV-sN-0Dl"/>
+                        <outlet property="username" destination="dkv-oJ-htb" id="gHb-Sk-9wL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1q-uH-rng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
