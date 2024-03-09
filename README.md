@@ -65,7 +65,7 @@ After clicking on the “Confirm Booking” button , your booking will be confir
      Created navigation from screen 1 to screen 2 ( When user clicked on the Get Started button it will navigate to Login page)
 
 
-==========================================================================================================================
+============================================================================================
 
 ## Modifications Screen 2 
      Added required labels and buttons in the page
