@@ -7,6 +7,7 @@
 
 import UIKit
 import AnimatedGradientView
+import AVFoundation
 
 class SignUpVC: UIViewController {
 
@@ -95,6 +96,7 @@ class SignUpVC: UIViewController {
     
     
     @IBAction func createAccount(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1103)
         guard let fName = self.firstNameTF.text, !fName.isEmpty else {
             self.validationMsgTV.text = "Please enter first name"
             return
