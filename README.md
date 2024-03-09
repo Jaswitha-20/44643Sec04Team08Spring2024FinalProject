@@ -65,4 +65,26 @@ After clicking on the “Confirm Booking” button , your booking will be confir
      Created navigation from screen 1 to screen 2 ( When user clicked on the Get Started button it will navigate to Login page)
 
 
+==========================================================================================================================
+
+## Modifications Screen 2 
+     Added required labels and buttons in the page
+     Replaced the loginVC into LoginViewController as earlier was not accepting any modifications
+     Updated Animated gradient view
+### Basic functionality
+     Added logic for validation of email and password fields
+     Added logic to show password textually
+
+## Created Screen 3
+      Added UI Elements and Contstraints 
+      Included Audio Play System Services
+      Created a viewController for screen 3
+      Added outlets and actions for appropriate UI Elements for Screen 3
+      Added Animated gradient view
+### Basic functionality
+     Added validation logic(email, password format verification and empty fields verification) in the Signup page.
+
+## Navigation 
+     Integrated proper navigation between the screens along with the back flow for the application.
+
      
