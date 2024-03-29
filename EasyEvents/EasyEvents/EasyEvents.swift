@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import AVFoundation
 import Lottie
 import AnimatedGradientView
-import AVFoundation
 
 class EasyEvents: UIViewController {
     

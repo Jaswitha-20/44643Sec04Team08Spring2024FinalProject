@@ -6,10 +6,8 @@
 //
 
 import UIKit
-import Lottie
 import AVFoundation
 import AnimatedGradientView
-
 class LOGINViewController: UIViewController {
     
     @IBOutlet weak var emailTF: UITextField!
@@ -35,7 +33,7 @@ class LOGINViewController: UIViewController {
         
         AudioServicesPlaySystemSound(1103)
                    // verify the users email and password with database datadf
-                   if(emailTF.text == "admin@gmail.com" && passwordTF.text == "password"){
+                   if(emailTF.text == "admin@gmail.com" && passwordTF.text == "Pass@123"){
                        // navigate to the main view after succesful login
                      //  self.performSegue(withIdentifier: loginNext, sender: self)
                    }

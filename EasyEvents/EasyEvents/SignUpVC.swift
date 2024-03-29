@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import AnimatedGradientView
 import AVFoundation
+import AnimatedGradientView
 
 class SignUpVC: UIViewController {
 
