@@ -97,48 +97,48 @@
                                     <outlet property="delegate" destination="VBp-ye-2bS" id="0kq-yB-Bxb"/>
                                 </connections>
                             </searchBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1YW-L8-JmP" userLabel="bigcontainerSV">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1YW-L8-JmP" userLabel="bigcontainerSV">
                                 <rect key="frame" x="20" y="205" width="393" height="544"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h6C-vV-UHd" userLabel="personalEvents">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="208"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="176"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birthday" translatesAutoresizingMaskIntoConstraints="NO" id="mAM-XL-F8R">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="208"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="176"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding" translatesAutoresizingMaskIntoConstraints="NO" id="EDH-e4-fs4">
-                                                <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="208"/>
+                                                <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="176"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aniversary" translatesAutoresizingMaskIntoConstraints="NO" id="z7R-bo-cBm">
-                                                <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="208"/>
+                                                <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="176"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-IJ-xQW" userLabel="corporateEvents">
-                                        <rect key="frame" x="0.0" y="248" width="393" height="128"/>
+                                        <rect key="frame" x="0.0" y="184" width="393" height="176"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conference" translatesAutoresizingMaskIntoConstraints="NO" id="nq2-rb-Ulw">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="176"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seminar" translatesAutoresizingMaskIntoConstraints="NO" id="AE9-3R-SGr">
-                                                <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="128"/>
+                                                <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="176"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Webinar" translatesAutoresizingMaskIntoConstraints="NO" id="yna-lc-67b">
-                                                <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="128"/>
+                                                <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="176"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-gw-ieY" userLabel="publicEvents">
-                                        <rect key="frame" x="0.0" y="416" width="393" height="128"/>
+                                        <rect key="frame" x="0.0" y="368" width="393" height="176"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pressmeet" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-x0-GSC">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="176"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opening" translatesAutoresizingMaskIntoConstraints="NO" id="Xki-Sz-bXy">
-                                                <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="128"/>
+                                                <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="176"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="publicmeeting" translatesAutoresizingMaskIntoConstraints="NO" id="sFY-m1-SuO">
-                                                <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="128"/>
+                                                <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="176"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -200,6 +200,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Logout" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="logoutBTN:" destination="ked-sr-sHG" eventType="touchUpInside" id="8pu-TH-3hD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname Lastname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLK-Ni-gpa">
                                 <rect key="frame" x="119" y="342" width="154" height="21"/>
@@ -731,13 +734,13 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

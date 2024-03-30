@@ -24,6 +24,8 @@ class ProfileVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func logoutBTN(_ sender: UIButton) {
+    }
     
 
     /*
