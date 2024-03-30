@@ -87,7 +87,7 @@ After clicking on the “Confirm Booking” button , your booking will be confir
 ## Navigation 
      Integrated proper navigation between the screens along with the back flow for the application.
 
-============================================================================================
+===========================================================================================
 
 ## Created Reset Password Screen
 
@@ -101,6 +101,7 @@ After clicking on the “Confirm Booking” button , your booking will be confir
      Created firebase database and added  GoogleService-Info.plist file into the project
 
 ### Added Tab bar controller which acomodates Home Screen, Favorites Screen, Profile Screen, and  Calendar Screen
+
 #### In Home Screen 
 
       Added UI elements and Constraints
@@ -108,7 +109,7 @@ After clicking on the “Confirm Booking” button , your booking will be confir
       Added outlets and actions for those screens
       Added animated gradient view
       Added Images and Searchbar for the home Screen
-   Implements tap gesture functionality 
+      Implements tap gesture functionality 
 
 #### In Profile Screen 
 
