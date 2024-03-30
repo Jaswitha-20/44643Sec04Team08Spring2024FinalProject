@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HZe-Z8-LQc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HZe-Z8-LQc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -165,6 +165,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="UhV-Nd-pha"/>
                     <navigationItem key="navigationItem" id="fXa-20-Sfk"/>
+                    <connections>
+                        <outletCollection property="homeimgCLCTN" destination="YfH-5h-5va" collectionClass="NSMutableArray" id="7HX-Mn-W7L"/>
+                        <outletCollection property="homeimgCLCTN" destination="veK-Yr-Oau" collectionClass="NSMutableArray" id="1BM-b5-2du"/>
+                        <outletCollection property="homeimgCLCTN" destination="nJ8-ro-5al" collectionClass="NSMutableArray" id="0Q8-D4-fEh"/>
+                        <outletCollection property="homeimgCLCTN" destination="pgB-e2-k35" collectionClass="NSMutableArray" id="Q3J-u2-d84"/>
+                        <outletCollection property="homeimgCLCTN" destination="eNM-7l-h7e" collectionClass="NSMutableArray" id="NFf-ZH-rAv"/>
+                        <outletCollection property="homeimgCLCTN" destination="vH2-Uq-hPe" collectionClass="NSMutableArray" id="uuB-bh-v62"/>
+                        <outletCollection property="homeimgCLCTN" destination="6wZ-T3-hxY" collectionClass="NSMutableArray" id="aqG-0W-W6W"/>
+                        <outletCollection property="homeimgCLCTN" destination="H1w-pE-Q6h" collectionClass="NSMutableArray" id="YAz-Lz-Jv8"/>
+                        <outletCollection property="homeimgCLCTN" destination="WlA-AW-Xzm" collectionClass="NSMutableArray" id="yOV-Re-UxW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJe-SY-5fj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -695,13 +706,13 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

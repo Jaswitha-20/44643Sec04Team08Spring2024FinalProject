@@ -10,6 +10,17 @@ import AnimatedGradientView
 
 class HomeVC: UIViewController {
 
+    
+    
+    
+    
+    
+    @IBOutlet var homeimgCLCTN: [UIImageView]!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +33,23 @@ class HomeVC: UIViewController {
                                                     (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
                 view.addSubview(animatedGradient)
                 view.sendSubviewToBack(animatedGradient)
+        
+        let TapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        TapGestureRecognizer.numberOfTapsRequired = 1
+        for img in homeimgCLCTN {
+            img.isUserInteractionEnabled = true
+            img.addGestureRecognizer(TapGestureRecognizer)
+        }
+        
+        
+        
+      //  homeimgCLCTN.text = "Total Credits: \(totalCredits)"
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func handleTap(_: UITapGestureRecognizer){
+        
     }
     
 
