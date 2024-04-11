@@ -147,8 +147,6 @@
                                     <constraint firstItem="h6C-vV-UHd" firstAttribute="trailing" secondItem="1YW-L8-JmP" secondAttribute="trailingMargin" id="8cg-rE-Rdr"/>
                                     <constraint firstItem="uXp-IJ-xQW" firstAttribute="trailing" secondItem="CTU-gw-ieY" secondAttribute="trailing" id="CFg-me-X2M"/>
                                     <constraint firstItem="h6C-vV-UHd" firstAttribute="trailing" secondItem="uXp-IJ-xQW" secondAttribute="trailing" id="N8q-BF-0cK"/>
-                                    <constraint firstItem="CTU-gw-ieY" firstAttribute="top" secondItem="1YW-L8-JmP" secondAttribute="top" constant="416" id="g3H-I4-Qji"/>
-                                    <constraint firstItem="uXp-IJ-xQW" firstAttribute="top" secondItem="1YW-L8-JmP" secondAttribute="top" constant="248" id="zCo-9r-ZW4"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -221,15 +219,27 @@
             </objects>
             <point key="canvasLocation" x="2830" y="458"/>
         </scene>
-        <!--View Controller-->
+        <!--CalendarVC View Controller-->
         <scene sceneID="BA1-fc-SDr">
             <objects>
-                <viewController id="LAx-tJ-BtU" sceneMemberID="viewController">
+                <viewController id="LAx-tJ-BtU" customClass="CalendarVCViewController" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWo-iY-9rn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zn8-li-4dD" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1ax-eN-NMl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1ax-eN-NMl" firstAttribute="bottom" secondItem="zn8-li-4dD" secondAttribute="bottom" id="0Sp-73-BYg"/>
+                            <constraint firstItem="1ax-eN-NMl" firstAttribute="trailing" secondItem="zn8-li-4dD" secondAttribute="trailing" id="67H-c9-9yB"/>
+                            <constraint firstItem="zn8-li-4dD" firstAttribute="top" secondItem="1ax-eN-NMl" secondAttribute="top" id="b0v-c8-evS"/>
+                            <constraint firstItem="zn8-li-4dD" firstAttribute="leading" secondItem="1ax-eN-NMl" secondAttribute="leading" id="vS9-0l-ZwJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="igU-Qe-e4d"/>
                 </viewController>
@@ -328,7 +338,8 @@
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X4T-8T-yLA" userLabel="Password ValidationTV">
                                                 <rect key="frame" x="0.0" y="313.66666666666663" width="353" height="33"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -712,7 +723,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sf5-ft-wqU"/>
+        <segue reference="czj-Nd-i5t"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Webinar" width="500" height="313"/>

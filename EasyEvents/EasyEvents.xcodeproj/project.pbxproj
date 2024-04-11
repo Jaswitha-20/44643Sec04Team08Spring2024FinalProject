@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510C75082BC89E76007878B5 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 510C75072BC89E76007878B5 /* FSCalendar */; };
+		510C750A2BC8A036007878B5 /* CalendarVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C75092BC8A036007878B5 /* CalendarVCViewController.swift */; };
 		5152CD852B9B70EA00A103E3 /* LOGINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5152CD842B9B70EA00A103E3 /* LOGINViewController.swift */; };
 		7CA3912F2B866EA300A24FE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */; };
 		7CA391312B866EA300A24FE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA391302B866EA300A24FE5 /* SceneDelegate.swift */; };
@@ -54,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		510C75092BC8A036007878B5 /* CalendarVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVCViewController.swift; sourceTree = "<group>"; };
 		5152CD842B9B70EA00A103E3 /* LOGINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOGINViewController.swift; sourceTree = "<group>"; };
 		7CA3912B2B866EA300A24FE5 /* EasyEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 				86D1A8892BB73BBA0066D41E /* FirebaseDatabase in Frameworks */,
 				86D1A8822BB73B2E0066D41E /* AnimatedGradientView in Frameworks */,
 				86D1A8902BB73E000066D41E /* Eureka in Frameworks */,
+				510C75082BC89E76007878B5 /* FSCalendar in Frameworks */,
 				86D1A87F2BB735360066D41E /* Lottie in Frameworks */,
 				86D1A8852BB73BBA0066D41E /* FirebaseAnalytics in Frameworks */,
 				86D1A8872BB73BBA0066D41E /* FirebaseAuth in Frameworks */,
@@ -140,6 +144,7 @@
 				7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */,
 				7CA391302B866EA300A24FE5 /* SceneDelegate.swift */,
 				7CA391342B866EA300A24FE5 /* Main.storyboard */,
+				510C75092BC8A036007878B5 /* CalendarVCViewController.swift */,
 				B0BBEA812B9A9054005A2765 /* SignUpVC.swift */,
 				7CA3915E2B86701400A24FE5 /* EasyEvents.swift */,
 				7CA391372B866EA500A24FE5 /* Assets.xcassets */,
@@ -214,6 +219,7 @@
 				86D1A88A2BB73BBA0066D41E /* FirebaseDatabaseSwift */,
 				86D1A88C2BB73BBA0066D41E /* FirebaseFirestore */,
 				86D1A88F2BB73E000066D41E /* Eureka */,
+				510C75072BC89E76007878B5 /* FSCalendar */,
 			);
 			productName = EasyEvents;
 			productReference = 7CA3912B2B866EA300A24FE5 /* EasyEvents.app */;
@@ -292,6 +298,7 @@
 				86D1A8802BB73B2E0066D41E /* XCRemoteSwiftPackageReference "AnimatedGradientView" */,
 				86D1A8832BB73BBA0066D41E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				86D1A88E2BB73E000066D41E /* XCRemoteSwiftPackageReference "Eureka" */,
+				510C75062BC89E76007878B5 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 7CA3912C2B866EA300A24FE5 /* Products */;
 			projectDirPath = "";
@@ -346,6 +353,7 @@
 				7CA3915F2B86701400A24FE5 /* EasyEvents.swift in Sources */,
 				8635A2A62BB78C720009B055 /* ResetPasswordVC.swift in Sources */,
 				8635A2AA2BB78C9F0009B055 /* FavouriteVC.swift in Sources */,
+				510C750A2BC8A036007878B5 /* CalendarVCViewController.swift in Sources */,
 				B0BBEA822B9A9054005A2765 /* SignUpVC.swift in Sources */,
 				7CA391312B866EA300A24FE5 /* SceneDelegate.swift in Sources */,
 				86D1A8932BB740380066D41E /* User.swift in Sources */,
@@ -691,6 +699,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		510C75062BC89E76007878B5 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 		86D1A87D2BB735360066D41E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -726,6 +742,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		510C75072BC89E76007878B5 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 510C75062BC89E76007878B5 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		86D1A87E2BB735360066D41E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 86D1A87D2BB735360066D41E /* XCRemoteSwiftPackageReference "lottie-ios" */;
