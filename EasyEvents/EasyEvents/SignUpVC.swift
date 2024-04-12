@@ -146,7 +146,13 @@ class SignUpVC: UIViewController {
             }
         }
         
-        
+        Task {
+              do {
+                  try await AuthenticationManager.shared.createUser(email: email.text!, password: passwordEnter.text!)
+              } catch {
+                 print("Error: \(error.localizedDescription)")
+              }
+          }
         // logic to transfer on to main screen
 
     }

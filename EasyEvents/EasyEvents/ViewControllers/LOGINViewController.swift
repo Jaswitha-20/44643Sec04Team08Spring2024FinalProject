@@ -61,10 +61,18 @@ class LOGINViewController: UIViewController {
         
         AudioServicesPlaySystemSound(1103)
                    // verify the users email and password with database datadf
-                   if(emailTF.text == "admin@gmail.com" && passwordTF.text == "Pass@123"){
-                       // navigate to the main view after succesful login
-                     //  self.performSegue(withIdentifier: loginNext, sender: self)
-                   }
+//                   if(emailTF.text == "admin@gmail.com" && passwordTF.text == "Pass@123"){
+//                       // navigate to the main view after succesful login
+//                     //  self.performSegue(withIdentifier: loginNext, sender: self)
+//                   }
+        Task {
+                do {
+                     try await AuthenticationManager.shared.signIn(email: emailTF.text!, password: passwordTF.text!)
+                                          
+                     } catch {
+                    self.passwordValidationTV.text = "Invalid Login Credentials! Please try again."
+                  }
+               }
     }
     
     @IBAction func passwordAction(_ sender: UITextField) {
