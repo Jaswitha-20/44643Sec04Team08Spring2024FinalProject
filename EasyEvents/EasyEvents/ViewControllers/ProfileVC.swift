@@ -25,17 +25,26 @@ class ProfileVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func logoutBTN(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Logout", message: "Would you like to logout?", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                alertController.addAction(cancelAction)
+           
+                let confirmAction = UIAlertAction(title: "Confirm", style: .default) { _ in
+                    self.performSegue(withIdentifier: "profileToLogin", sender: self)
+                }
+                alertController.addAction(confirmAction)
+                present(alertController, animated: true, completion: nil)
     }
     
 
-    /*
+     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard segue.destination is LOGINViewController else {return}
     }
-    */
+    
 
 }

@@ -54,11 +54,6 @@ class LOGINViewController: UIViewController {
                    }
                }
            
-        
-        
-        
-        
-        
         AudioServicesPlaySystemSound(1103)
                    // verify the users email and password with database datadf
 //                   if(emailTF.text == "admin@gmail.com" && passwordTF.text == "Pass@123"){
@@ -167,7 +162,10 @@ class LOGINViewController: UIViewController {
            return true
        }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            navigationController?.setNavigationBarHidden(true, animated: animated)
+        }
     /*
     // MARK: - Navigation
 
