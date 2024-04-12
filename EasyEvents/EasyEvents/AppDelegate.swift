@@ -7,10 +7,44 @@
 
 import UIKit
 import Firebase
+import EventKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
+    var window: UIWindow?
+        let eventStore = EKEventStore()
+        var permissionRequested = false
+
+//        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//            return true
+//        }
+
+    func requestCalendarAccessIfNeeded(completion: @escaping (Bool) -> Void) {
+            if !permissionRequested {
+                eventStore.requestAccess(to: .event) { (granted, error) in
+                    self.permissionRequested = true
+                    completion(granted)
+                }
+            } else {
+                completion(true)
+            }
+        }
+
+        func fetchEventsForNextMonth(completion: @escaping ([EKEvent]?) -> Void) {
+            let startDate = Date()
+            let endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
+            let eventsPredicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
+            let events = eventStore.events(matching: eventsPredicate)
+            completion(events)
+        }
+
+
+    
+    
+    
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

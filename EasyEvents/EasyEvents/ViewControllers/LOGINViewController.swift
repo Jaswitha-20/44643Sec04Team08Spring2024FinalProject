@@ -10,6 +10,11 @@ import AVFoundation
 import AnimatedGradientView
 class LOGINViewController: UIViewController {
     
+    
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+    
     @IBOutlet weak var emailTF: UITextField!
     
     @IBOutlet weak var lockBtn: UIButton!
@@ -30,6 +35,29 @@ class LOGINViewController: UIViewController {
     }
     
     @IBAction func onLogin(_ sender: UIButton) {
+        
+        
+        
+       
+        appDelegate.requestCalendarAccessIfNeeded { [weak self] (granted) in
+                   if granted {
+                       self?.appDelegate.fetchEventsForNextMonth { (events) in
+                           if let events = events {
+                               // Process fetched events
+                               print("Fetched \(events.count) events")
+                           } else {
+                               print("Failed to fetch events")
+                           }
+                       }
+                   } else {
+                       print("Access to calendar not granted")
+                   }
+               }
+           
+        
+        
+        
+        
         
         AudioServicesPlaySystemSound(1103)
                    // verify the users email and password with database datadf
