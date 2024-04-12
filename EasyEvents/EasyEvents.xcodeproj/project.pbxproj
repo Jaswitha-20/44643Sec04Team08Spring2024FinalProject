@@ -10,6 +10,7 @@
 		510C75082BC89E76007878B5 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 510C75072BC89E76007878B5 /* FSCalendar */; };
 		510C750A2BC8A036007878B5 /* CalendarVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C75092BC8A036007878B5 /* CalendarVCViewController.swift */; };
 		5152CD852B9B70EA00A103E3 /* LOGINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5152CD842B9B70EA00A103E3 /* LOGINViewController.swift */; };
+		7C1BAA172BC8B70A00CFFC60 /* OrganizerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1BAA162BC8B70A00CFFC60 /* OrganizerVCViewController.swift */; };
 		7CA3912F2B866EA300A24FE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */; };
 		7CA391312B866EA300A24FE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA391302B866EA300A24FE5 /* SceneDelegate.swift */; };
 		7CA391332B866EA300A24FE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA391322B866EA300A24FE5 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		510C75092BC8A036007878B5 /* CalendarVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVCViewController.swift; sourceTree = "<group>"; };
 		5152CD842B9B70EA00A103E3 /* LOGINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOGINViewController.swift; sourceTree = "<group>"; };
+		7C1BAA162BC8B70A00CFFC60 /* OrganizerVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerVCViewController.swift; sourceTree = "<group>"; };
 		7CA3912B2B866EA300A24FE5 /* EasyEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CA391302B866EA300A24FE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */,
 				7CA391302B866EA300A24FE5 /* SceneDelegate.swift */,
 				7CA391342B866EA300A24FE5 /* Main.storyboard */,
+				7C1BAA162BC8B70A00CFFC60 /* OrganizerVCViewController.swift */,
 				510C75092BC8A036007878B5 /* CalendarVCViewController.swift */,
 				B0BBEA812B9A9054005A2765 /* SignUpVC.swift */,
 				7CA3915E2B86701400A24FE5 /* EasyEvents.swift */,
@@ -351,6 +354,7 @@
 				7CA391332B866EA300A24FE5 /* ViewController.swift in Sources */,
 				7CA3912F2B866EA300A24FE5 /* AppDelegate.swift in Sources */,
 				7CA3915F2B86701400A24FE5 /* EasyEvents.swift in Sources */,
+				7C1BAA172BC8B70A00CFFC60 /* OrganizerVCViewController.swift in Sources */,
 				8635A2A62BB78C720009B055 /* ResetPasswordVC.swift in Sources */,
 				8635A2AA2BB78C9F0009B055 /* FavouriteVC.swift in Sources */,
 				510C750A2BC8A036007878B5 /* CalendarVCViewController.swift in Sources */,
