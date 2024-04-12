@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HZe-Z8-LQc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HZe-Z8-LQc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -263,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="2924" y="937"/>
         </scene>
-        <!--View Controller-->
+        <!--Event DetailsVC-->
         <scene sceneID="DSq-kU-CNz">
             <objects>
-                <viewController id="Xh1-pM-Dji" sceneMemberID="viewController">
+                <viewController id="Xh1-pM-Dji" customClass="EventDetailsVC" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="NvG-LV-zJ5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,10 +391,15 @@
                         <barButtonItem title="Item" id="Cb5-0B-of4"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="DescriptionTV" destination="lbi-Ow-9fh" id="gKK-01-lg7"/>
+                        <outlet property="FilterBTN" destination="o2L-Xx-m6h" id="ylg-eT-tnd"/>
+                        <outletCollection property="ImagesIV" destination="ezp-xR-Qgl" collectionClass="NSMutableArray" id="vWz-Dc-zof"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shv-79-3d6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3776" y="-42"/>
+            <point key="canvasLocation" x="3266" y="-32"/>
         </scene>
         <!--FavouriteVC-->
         <scene sceneID="jRR-qd-vFN">
@@ -802,7 +807,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ACu-Rp-rpD" userLabel="ButtonsSV">
-                                                <rect key="frame" x="0.0" y="303.66666666666663" width="353" height="93.333333333333371"/>
+                                                <rect key="frame" x="0.0" y="303.66666666666663" width="353" height="93.333333333333314"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGV-fV-RXR">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="42.666666666666664"/>

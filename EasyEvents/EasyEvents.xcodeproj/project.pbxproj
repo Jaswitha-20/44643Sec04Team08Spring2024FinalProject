@@ -38,6 +38,7 @@
 		86D1A8932BB740380066D41E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1A8922BB740380066D41E /* User.swift */; };
 		86D1A8952BB749D20066D41E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1A8942BB749D20066D41E /* Event.swift */; };
 		B0BBEA822B9A9054005A2765 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBEA812B9A9054005A2765 /* SignUpVC.swift */; };
+		FB7CEE312BC9F74F00158FF5 /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CEE302BC9F74F00158FF5 /* EventDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		86D1A8922BB740380066D41E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		86D1A8942BB749D20066D41E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B0BBEA812B9A9054005A2765 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		FB7CEE302BC9F74F00158FF5 /* EventDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */,
 				7CA391302B866EA300A24FE5 /* SceneDelegate.swift */,
 				7CA391342B866EA300A24FE5 /* Main.storyboard */,
+				FB7CEE302BC9F74F00158FF5 /* EventDetailsVC.swift */,
 				7C1BAA162BC8B70A00CFFC60 /* OrganizerVCViewController.swift */,
 				510C75092BC8A036007878B5 /* CalendarVCViewController.swift */,
 				B0BBEA812B9A9054005A2765 /* SignUpVC.swift */,
@@ -355,6 +358,7 @@
 				8635A2A82BB78C8C0009B055 /* HomeVC.swift in Sources */,
 				5152CD852B9B70EA00A103E3 /* LOGINViewController.swift in Sources */,
 				7CA391332B866EA300A24FE5 /* ViewController.swift in Sources */,
+				FB7CEE312BC9F74F00158FF5 /* EventDetailsVC.swift in Sources */,
 				7CA3912F2B866EA300A24FE5 /* AppDelegate.swift in Sources */,
 				865515C22BC9CEB3001B505A /* AuthenticationModel.swift in Sources */,
 				7CA3915F2B86701400A24FE5 /* EasyEvents.swift in Sources */,
