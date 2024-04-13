@@ -39,6 +39,7 @@
 		86D1A8952BB749D20066D41E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1A8942BB749D20066D41E /* Event.swift */; };
 		B0BBEA822B9A9054005A2765 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBEA812B9A9054005A2765 /* SignUpVC.swift */; };
 		FB7CEE312BC9F74F00158FF5 /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CEE302BC9F74F00158FF5 /* EventDetailsVC.swift */; };
+		FB7CEE332BCA418600158FF5 /* OrganizerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CEE322BCA418600158FF5 /* OrganizerDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		86D1A8942BB749D20066D41E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B0BBEA812B9A9054005A2765 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		FB7CEE302BC9F74F00158FF5 /* EventDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
+		FB7CEE322BCA418600158FF5 /* OrganizerDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				7CA3912E2B866EA300A24FE5 /* AppDelegate.swift */,
 				7CA391302B866EA300A24FE5 /* SceneDelegate.swift */,
 				7CA391342B866EA300A24FE5 /* Main.storyboard */,
+				FB7CEE322BCA418600158FF5 /* OrganizerDetailsVC.swift */,
 				FB7CEE302BC9F74F00158FF5 /* EventDetailsVC.swift */,
 				7C1BAA162BC8B70A00CFFC60 /* OrganizerVCViewController.swift */,
 				510C75092BC8A036007878B5 /* CalendarVCViewController.swift */,
@@ -365,6 +368,7 @@
 				7C1BAA172BC8B70A00CFFC60 /* OrganizerVCViewController.swift in Sources */,
 				8635A2A62BB78C720009B055 /* ResetPasswordVC.swift in Sources */,
 				8635A2AA2BB78C9F0009B055 /* FavouriteVC.swift in Sources */,
+				FB7CEE332BCA418600158FF5 /* OrganizerDetailsVC.swift in Sources */,
 				510C750A2BC8A036007878B5 /* CalendarVCViewController.swift in Sources */,
 				B0BBEA822B9A9054005A2765 /* SignUpVC.swift in Sources */,
 				7CA391312B866EA300A24FE5 /* SceneDelegate.swift in Sources */,

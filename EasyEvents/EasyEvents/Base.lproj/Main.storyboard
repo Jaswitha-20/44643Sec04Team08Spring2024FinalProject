@@ -877,10 +877,10 @@
             </objects>
             <point key="canvasLocation" x="1858.7786259541983" y="-42.253521126760567"/>
         </scene>
-        <!--View Controller-->
+        <!--Organizer DetailsVC-->
         <scene sceneID="v2B-pc-oGm">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="qcr-xA-LO4" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="qcr-xA-LO4" customClass="OrganizerDetailsVC" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bVR-rW-oFI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -983,6 +983,11 @@
                         <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="bas-Od-QcI"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="CalendarView" destination="p0g-Jx-VGH" id="DSx-Nc-7Dk"/>
+                        <outlet property="booknowBTN" destination="1GP-DA-Drh" id="LJS-5K-NPJ"/>
+                        <outlet property="imageIV" destination="iY1-wv-9fL" id="9HK-Gy-wTu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMG-nQ-hP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
