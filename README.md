@@ -122,3 +122,22 @@ After clicking on the “Confirm Booking” button , your booking will be confir
      Integrated proper navigation between the screens along with the back flow for the application.
 
 
+## Created calendar Screen
+     Added UI elements and constraints for calendar 
+     Created a view controller for this screen
+     Added outlets and actions 
+     Added functionality for request access and fetch events
+
+## FirebaseDatabase
+      Added added the logic for User authentication in firebase
+      Added the logic for User authentication in firebase
+
+### Added functionality for Logout Screen
+
+## Created Screen 4
+     Added screen 4 with scroll view
+     Added event catrgories details into json file for API
+     Collected and added reguired images for the project(Due to space added only few images and committing)
+     Created Class & outlets for EventDetails Screen
+## Created Outlets, class for Screen 5
+
