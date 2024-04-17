@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCMHZf5PpU03K4LFqe4C0Kpenxv6TAyw88</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1074626947437</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.nwmissouri.event.EventManagementApplication</string>
+	<key>PROJECT_ID</key>
+	<string>eventmanagementapplicati-744f6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eventmanagementapplicati-744f6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1074626947437:ios:41983133d3d860c7091264</string>
+</dict>
+</plist>
