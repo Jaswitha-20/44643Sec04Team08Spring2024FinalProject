@@ -26,6 +26,11 @@
 		8033E3B92BCAF1DD00C50362 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8033E3B82BCAF1DD00C50362 /* FirebaseStorage */; };
 		8033E3BF2BCAF29F00C50362 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033E3BE2BCAF29F00C50362 /* UserModel.swift */; };
 		8033E3D92BCC4ACA00C50362 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8033E3D82BCC4ACA00C50362 /* GoogleService-Info.plist */; };
+		86809B172BD028F9004A54D9 /* ForgetPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B162BD028F9004A54D9 /* ForgetPasswordManager.swift */; };
+		86809B192BD02B40004A54D9 /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B182BD02B40004A54D9 /* FireStoreManager.swift */; };
+		86809B1B2BD02C70004A54D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B1A2BD02C70004A54D9 /* Extensions.swift */; };
+		86809B1D2BD030AE004A54D9 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B1C2BD030AE004A54D9 /* UserDefaultsManager.swift */; };
+		86809B1F2BD0313C004A54D9 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B1E2BD0313C004A54D9 /* EventModel.swift */; };
 		86A4EF5B2BCEDD78008ECF16 /* AnimatedGradientView in Frameworks */ = {isa = PBXBuildFile; productRef = 86A4EF5A2BCEDD78008ECF16 /* AnimatedGradientView */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +48,11 @@
 		8033E3A62BCAF0E500C50362 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		8033E3BE2BCAF29F00C50362 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8033E3D82BCC4ACA00C50362 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		86809B162BD028F9004A54D9 /* ForgetPasswordManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordManager.swift; sourceTree = "<group>"; };
+		86809B182BD02B40004A54D9 /* FireStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
+		86809B1A2BD02C70004A54D9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		86809B1C2BD030AE004A54D9 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		86809B1E2BD0313C004A54D9 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +100,13 @@
 				8033E38A2BCAE04800C50362 /* IntialVC.swift */,
 				8033E3A42BCAF0E500C50362 /* ForgotPasswordVC.swift */,
 				8033E3A52BCAF0E500C50362 /* LoginVC.swift */,
+				86809B162BD028F9004A54D9 /* ForgetPasswordManager.swift */,
 				8033E3A62BCAF0E500C50362 /* SignUpVC.swift */,
+				86809B182BD02B40004A54D9 /* FireStoreManager.swift */,
+				86809B1A2BD02C70004A54D9 /* Extensions.swift */,
+				86809B1E2BD0313C004A54D9 /* EventModel.swift */,
 				8033E3BE2BCAF29F00C50362 /* UserModel.swift */,
+				86809B1C2BD030AE004A54D9 /* UserDefaultsManager.swift */,
 				8033E37C2BCADFB200C50362 /* Main.storyboard */,
 				8033E37F2BCADFB300C50362 /* Assets.xcassets */,
 				8033E3812BCADFB300C50362 /* LaunchScreen.storyboard */,
@@ -199,9 +214,14 @@
 				8033E3772BCADFB200C50362 /* AppDelegate.swift in Sources */,
 				8033E3A82BCAF0E500C50362 /* LoginVC.swift in Sources */,
 				8033E3792BCADFB200C50362 /* SceneDelegate.swift in Sources */,
+				86809B192BD02B40004A54D9 /* FireStoreManager.swift in Sources */,
+				86809B1D2BD030AE004A54D9 /* UserDefaultsManager.swift in Sources */,
+				86809B172BD028F9004A54D9 /* ForgetPasswordManager.swift in Sources */,
+				86809B1B2BD02C70004A54D9 /* Extensions.swift in Sources */,
 				8033E3A72BCAF0E500C50362 /* ForgotPasswordVC.swift in Sources */,
 				8033E38B2BCAE04800C50362 /* IntialVC.swift in Sources */,
 				8033E3A92BCAF0E500C50362 /* SignUpVC.swift in Sources */,
+				86809B1F2BD0313C004A54D9 /* EventModel.swift in Sources */,
 				8033E3BF2BCAF29F00C50362 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
