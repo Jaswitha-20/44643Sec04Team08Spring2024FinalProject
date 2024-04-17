@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51821F192BD033B50093E323 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51821F182BD033B40093E323 /* TableViewCell.swift */; };
+		51821F1E2BD033F90093E323 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51821F1A2BD033F80093E323 /* BaseViewController.swift */; };
+		51821F1F2BD033F90093E323 /* EventDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51821F1B2BD033F80093E323 /* EventDetailVC.swift */; };
+		51821F202BD033F90093E323 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51821F1C2BD033F90093E323 /* SettingVC.swift */; };
+		51821F212BD033F90093E323 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51821F1D2BD033F90093E323 /* EventCell.swift */; };
 		8033E3772BCADFB200C50362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033E3762BCADFB200C50362 /* AppDelegate.swift */; };
 		8033E3792BCADFB200C50362 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033E3782BCADFB200C50362 /* SceneDelegate.swift */; };
 		8033E37E2BCADFB200C50362 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8033E37D2BCADFB200C50362 /* Base */; };
@@ -35,6 +40,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51821F182BD033B40093E323 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		51821F1A2BD033F80093E323 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		51821F1B2BD033F80093E323 /* EventDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailVC.swift; sourceTree = "<group>"; };
+		51821F1C2BD033F90093E323 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		51821F1D2BD033F90093E323 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		8033E3732BCADFB200C50362 /* EventManagementApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventManagementApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033E3762BCADFB200C50362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8033E3782BCADFB200C50362 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +110,11 @@
 				8033E38A2BCAE04800C50362 /* IntialVC.swift */,
 				8033E3A42BCAF0E500C50362 /* ForgotPasswordVC.swift */,
 				8033E3A52BCAF0E500C50362 /* LoginVC.swift */,
+				51821F1A2BD033F80093E323 /* BaseViewController.swift */,
+				51821F1D2BD033F90093E323 /* EventCell.swift */,
+				51821F1B2BD033F80093E323 /* EventDetailVC.swift */,
+				51821F1C2BD033F90093E323 /* SettingVC.swift */,
+				51821F182BD033B40093E323 /* TableViewCell.swift */,
 				86809B162BD028F9004A54D9 /* ForgetPasswordManager.swift */,
 				8033E3A62BCAF0E500C50362 /* SignUpVC.swift */,
 				86809B182BD02B40004A54D9 /* FireStoreManager.swift */,
@@ -211,13 +226,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51821F192BD033B50093E323 /* TableViewCell.swift in Sources */,
+				51821F202BD033F90093E323 /* SettingVC.swift in Sources */,
 				8033E3772BCADFB200C50362 /* AppDelegate.swift in Sources */,
 				8033E3A82BCAF0E500C50362 /* LoginVC.swift in Sources */,
 				8033E3792BCADFB200C50362 /* SceneDelegate.swift in Sources */,
+				51821F212BD033F90093E323 /* EventCell.swift in Sources */,
 				86809B192BD02B40004A54D9 /* FireStoreManager.swift in Sources */,
+				51821F1E2BD033F90093E323 /* BaseViewController.swift in Sources */,
 				86809B1D2BD030AE004A54D9 /* UserDefaultsManager.swift in Sources */,
 				86809B172BD028F9004A54D9 /* ForgetPasswordManager.swift in Sources */,
 				86809B1B2BD02C70004A54D9 /* Extensions.swift in Sources */,
+				51821F1F2BD033F90093E323 /* EventDetailVC.swift in Sources */,
 				8033E3A72BCAF0E500C50362 /* ForgotPasswordVC.swift in Sources */,
 				8033E38B2BCAE04800C50362 /* IntialVC.swift in Sources */,
 				8033E3A92BCAF0E500C50362 /* SignUpVC.swift in Sources */,
