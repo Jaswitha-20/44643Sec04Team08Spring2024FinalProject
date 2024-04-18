@@ -8,6 +8,7 @@
 import UIKit
 import EventKit
 import MapKit
+import AnimatedGradientView
 
 class EventBookingVC: UIViewController {
     @IBOutlet var termButton: UIButton!
@@ -40,7 +41,14 @@ class EventBookingVC: UIViewController {
       override func viewDidLoad() {
           super.viewDidLoad()
           
-          
+          let animatedGradient = AnimatedGradientView(frame: view.bounds)
+                  animatedGradient.direction = .up
+                  animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
+                                                      (colors: ["#F5A9D0", "#2ECCFA", "#BEF781"], .right, .axial),
+                                                      (colors: ["#ECE0F8", "#819FF7"], .down, .axial),
+                                                      (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
+                  view.addSubview(animatedGradient)
+                  view.sendSubviewToBack(animatedGradient)
           // Set up time picker
           timePicker.datePickerMode = .time
                  if #available(iOS 13.4, *) {
@@ -98,7 +106,7 @@ class EventBookingVC: UIViewController {
         self.location.text = eventData?.location
         self.date.text = eventData?.date
         self.time.text = eventData?.time
-        self.price.text = "\(eventData?.price ?? 100)"
+        self.price.text = "\(String(describing: eventData?.price == 0 ? 100 : eventData?.price))"
         self.organiserName.text = "Name : \(organiserDetail?.name ?? "")"
         self.organiserEmail.text = "Email : \(organiserDetail?.email ?? "")"
         self.organiserContact.text = "Contact : \(organiserDetail?.contact ?? "")"
