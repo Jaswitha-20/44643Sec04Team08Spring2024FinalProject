@@ -14,6 +14,20 @@
 		51821F212BD033F90093E323 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51821F1D2BD033F90093E323 /* EventCell.swift */; };
 		7C70F03F2BD0913800FB22E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C70F03E2BD0913800FB22E9 /* Main.storyboard */; };
 		7C70F0812BD0A88700FB22E9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F0802BD0A88700FB22E9 /* HomeVC.swift */; };
+		7C70F0862BD0AC8700FB22E9 /* CalendarVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F0852BD0AC8700FB22E9 /* CalendarVCViewController.swift */; };
+		7C70F08D2BD0AE2400FB22E9 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 7C70F08C2BD0AE2400FB22E9 /* FSCalendar */; };
+		7C70F09F2BD0B12900FB22E9 /* MapKitSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F0902BD0B12900FB22E9 /* MapKitSearchViewController.swift */; };
+		7C70F0A02BD0B12900FB22E9 /* Material.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C70F0922BD0B12900FB22E9 /* Material.xcassets */; };
+		7C70F0A12BD0B12900FB22E9 /* MapItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C70F0942BD0B12900FB22E9 /* MapItemTableViewCell.xib */; };
+		7C70F0A22BD0B12900FB22E9 /* SearchCompletionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F0952BD0B12900FB22E9 /* SearchCompletionTableViewCell.swift */; };
+		7C70F0A32BD0B12900FB22E9 /* MapTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F0962BD0B12900FB22E9 /* MapTabsView.swift */; };
+		7C70F0A42BD0B12900FB22E9 /* MapItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F0972BD0B12900FB22E9 /* MapItemTableViewCell.swift */; };
+		7C70F0A52BD0B12900FB22E9 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F0982BD0B12900FB22E9 /* BottomSheetView.swift */; };
+		7C70F0A62BD0B12900FB22E9 /* SearchCompletionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C70F0992BD0B12900FB22E9 /* SearchCompletionTableViewCell.xib */; };
+		7C70F0A72BD0B12900FB22E9 /* CLPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F09B2BD0B12900FB22E9 /* CLPlacemark.swift */; };
+		7C70F0A82BD0B12900FB22E9 /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F09C2BD0B12900FB22E9 /* MKMapView.swift */; };
+		7C70F0A92BD0B12900FB22E9 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70F09D2BD0B12900FB22E9 /* CLLocationCoordinate2D.swift */; };
+		7C70F0AA2BD0B12900FB22E9 /* MapKitSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C70F09E2BD0B12900FB22E9 /* MapKitSearchViewController.xib */; };
 		8033E3772BCADFB200C50362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033E3762BCADFB200C50362 /* AppDelegate.swift */; };
 		8033E3792BCADFB200C50362 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033E3782BCADFB200C50362 /* SceneDelegate.swift */; };
 		8033E3802BCADFB300C50362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8033E37F2BCADFB300C50362 /* Assets.xcassets */; };
@@ -48,6 +62,19 @@
 		51821F1D2BD033F90093E323 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		7C70F03E2BD0913800FB22E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7C70F0802BD0A88700FB22E9 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		7C70F0852BD0AC8700FB22E9 /* CalendarVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVCViewController.swift; sourceTree = "<group>"; };
+		7C70F0902BD0B12900FB22E9 /* MapKitSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitSearchViewController.swift; sourceTree = "<group>"; };
+		7C70F0922BD0B12900FB22E9 /* Material.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Material.xcassets; sourceTree = "<group>"; };
+		7C70F0942BD0B12900FB22E9 /* MapItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapItemTableViewCell.xib; sourceTree = "<group>"; };
+		7C70F0952BD0B12900FB22E9 /* SearchCompletionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCompletionTableViewCell.swift; sourceTree = "<group>"; };
+		7C70F0962BD0B12900FB22E9 /* MapTabsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTabsView.swift; sourceTree = "<group>"; };
+		7C70F0972BD0B12900FB22E9 /* MapItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemTableViewCell.swift; sourceTree = "<group>"; };
+		7C70F0982BD0B12900FB22E9 /* BottomSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		7C70F0992BD0B12900FB22E9 /* SearchCompletionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCompletionTableViewCell.xib; sourceTree = "<group>"; };
+		7C70F09B2BD0B12900FB22E9 /* CLPlacemark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLPlacemark.swift; sourceTree = "<group>"; };
+		7C70F09C2BD0B12900FB22E9 /* MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
+		7C70F09D2BD0B12900FB22E9 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		7C70F09E2BD0B12900FB22E9 /* MapKitSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapKitSearchViewController.xib; sourceTree = "<group>"; };
 		8033E3732BCADFB200C50362 /* EventManagementApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventManagementApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033E3762BCADFB200C50362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8033E3782BCADFB200C50362 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +102,7 @@
 				8033E3B12BCAF1DD00C50362 /* FirebaseDatabaseSwift in Frameworks */,
 				8033E3AF2BCAF1DD00C50362 /* FirebaseDatabase in Frameworks */,
 				86A4EF5B2BCEDD78008ECF16 /* AnimatedGradientView in Frameworks */,
+				7C70F08D2BD0AE2400FB22E9 /* FSCalendar in Frameworks */,
 				8033E3B72BCAF1DD00C50362 /* FirebaseMessaging in Frameworks */,
 				8033E38E2BCAE06800C50362 /* Lottie in Frameworks */,
 				8033E3B32BCAF1DD00C50362 /* FirebaseFirestore in Frameworks */,
@@ -87,6 +115,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C70F08E2BD0B12900FB22E9 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7C70F08F2BD0B12900FB22E9 /* Map */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		7C70F08F2BD0B12900FB22E9 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7C70F0902BD0B12900FB22E9 /* MapKitSearchViewController.swift */,
+				7C70F0912BD0B12900FB22E9 /* Resources */,
+				7C70F0932BD0B12900FB22E9 /* Objects */,
+				7C70F09A2BD0B12900FB22E9 /* Extensions */,
+				7C70F09E2BD0B12900FB22E9 /* MapKitSearchViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		7C70F0912BD0B12900FB22E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C70F0922BD0B12900FB22E9 /* Material.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C70F0932BD0B12900FB22E9 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7C70F0942BD0B12900FB22E9 /* MapItemTableViewCell.xib */,
+				7C70F0952BD0B12900FB22E9 /* SearchCompletionTableViewCell.swift */,
+				7C70F0962BD0B12900FB22E9 /* MapTabsView.swift */,
+				7C70F0972BD0B12900FB22E9 /* MapItemTableViewCell.swift */,
+				7C70F0982BD0B12900FB22E9 /* BottomSheetView.swift */,
+				7C70F0992BD0B12900FB22E9 /* SearchCompletionTableViewCell.xib */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		7C70F09A2BD0B12900FB22E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C70F09B2BD0B12900FB22E9 /* CLPlacemark.swift */,
+				7C70F09C2BD0B12900FB22E9 /* MKMapView.swift */,
+				7C70F09D2BD0B12900FB22E9 /* CLLocationCoordinate2D.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8033E36A2BCADFB200C50362 = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +198,9 @@
 				51821F1C2BD033F90093E323 /* SettingVC.swift */,
 				51821F182BD033B40093E323 /* TableViewCell.swift */,
 				86809B162BD028F9004A54D9 /* ForgetPasswordManager.swift */,
+				7C70F08E2BD0B12900FB22E9 /* Map */,
 				8033E3A62BCAF0E500C50362 /* SignUpVC.swift */,
+				7C70F0852BD0AC8700FB22E9 /* CalendarVCViewController.swift */,
 				86809B182BD02B40004A54D9 /* FireStoreManager.swift */,
 				86809B1A2BD02C70004A54D9 /* Extensions.swift */,
 				86809B1E2BD0313C004A54D9 /* EventModel.swift */,
@@ -167,6 +248,7 @@
 				8033E3B62BCAF1DD00C50362 /* FirebaseMessaging */,
 				8033E3B82BCAF1DD00C50362 /* FirebaseStorage */,
 				86A4EF5A2BCEDD78008ECF16 /* AnimatedGradientView */,
+				7C70F08C2BD0AE2400FB22E9 /* FSCalendar */,
 			);
 			productName = EventManagementApplication;
 			productReference = 8033E3732BCADFB200C50362 /* EventManagementApplication.app */;
@@ -200,6 +282,7 @@
 				8033E38C2BCAE06800C50362 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				8033E3AA2BCAF1A700C50362 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				86A4EF592BCEDD77008ECF16 /* XCRemoteSwiftPackageReference "AnimatedGradientView" */,
+				7C70F08B2BD0AE2400FB22E9 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 8033E3742BCADFB200C50362 /* Products */;
 			projectDirPath = "";
@@ -216,7 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8033E3802BCADFB300C50362 /* Assets.xcassets in Resources */,
+				7C70F0A62BD0B12900FB22E9 /* SearchCompletionTableViewCell.xib in Resources */,
+				7C70F0AA2BD0B12900FB22E9 /* MapKitSearchViewController.xib in Resources */,
 				8033E3832BCADFB300C50362 /* Base in Resources */,
+				7C70F0A02BD0B12900FB22E9 /* Material.xcassets in Resources */,
+				7C70F0A12BD0B12900FB22E9 /* MapItemTableViewCell.xib in Resources */,
 				8033E3D92BCC4ACA00C50362 /* GoogleService-Info.plist in Resources */,
 				7C70F03F2BD0913800FB22E9 /* Main.storyboard in Resources */,
 			);
@@ -229,18 +316,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C70F09F2BD0B12900FB22E9 /* MapKitSearchViewController.swift in Sources */,
 				51821F192BD033B50093E323 /* TableViewCell.swift in Sources */,
 				51821F202BD033F90093E323 /* SettingVC.swift in Sources */,
 				8033E3772BCADFB200C50362 /* AppDelegate.swift in Sources */,
+				7C70F0A72BD0B12900FB22E9 /* CLPlacemark.swift in Sources */,
+				7C70F0A82BD0B12900FB22E9 /* MKMapView.swift in Sources */,
 				7C70F0812BD0A88700FB22E9 /* HomeVC.swift in Sources */,
+				7C70F0A22BD0B12900FB22E9 /* SearchCompletionTableViewCell.swift in Sources */,
 				8033E3A82BCAF0E500C50362 /* LoginVC.swift in Sources */,
+				7C70F0A42BD0B12900FB22E9 /* MapItemTableViewCell.swift in Sources */,
+				7C70F0A32BD0B12900FB22E9 /* MapTabsView.swift in Sources */,
+				7C70F0A92BD0B12900FB22E9 /* CLLocationCoordinate2D.swift in Sources */,
 				8033E3792BCADFB200C50362 /* SceneDelegate.swift in Sources */,
 				51821F212BD033F90093E323 /* EventCell.swift in Sources */,
 				86809B192BD02B40004A54D9 /* FireStoreManager.swift in Sources */,
+				7C70F0862BD0AC8700FB22E9 /* CalendarVCViewController.swift in Sources */,
 				51821F1E2BD033F90093E323 /* BaseViewController.swift in Sources */,
 				86809B1D2BD030AE004A54D9 /* UserDefaultsManager.swift in Sources */,
 				86809B172BD028F9004A54D9 /* ForgetPasswordManager.swift in Sources */,
 				86809B1B2BD02C70004A54D9 /* Extensions.swift in Sources */,
+				7C70F0A52BD0B12900FB22E9 /* BottomSheetView.swift in Sources */,
 				51821F1F2BD033F90093E323 /* EventDetailVC.swift in Sources */,
 				8033E3A72BCAF0E500C50362 /* ForgotPasswordVC.swift in Sources */,
 				8033E38B2BCAE04800C50362 /* IntialVC.swift in Sources */,
@@ -463,6 +559,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7C70F08B2BD0AE2400FB22E9 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 		8033E38C2BCAE06800C50362 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
@@ -490,6 +594,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7C70F08C2BD0AE2400FB22E9 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C70F08B2BD0AE2400FB22E9 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		8033E38D2BCAE06800C50362 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8033E38C2BCAE06800C50362 /* XCRemoteSwiftPackageReference "lottie-spm" */;
