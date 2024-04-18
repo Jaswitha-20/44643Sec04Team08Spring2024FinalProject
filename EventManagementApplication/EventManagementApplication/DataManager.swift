@@ -12,7 +12,7 @@ class DataManager {
     typealias EventDetailCompletion = (Result<EventDetailResponse, Error>) -> Void
 
     func fetchDataFromAPI(completion: @escaping (EventResponse?, Error?) -> Void) {
-        let urlString = "https://jsondata-ewow.onrender.com/json.json"
+        let urlString = "https://demo9952713.mockable.io/getEvents"
         
         guard let url = URL(string: urlString) else {
             completion(nil, NSError(domain: "Invalid URL", code: 0, userInfo: nil))
@@ -41,7 +41,7 @@ class DataManager {
     }
     
     func fetchOrganiserDataFromAPI(completion: @escaping ([Organizer]?, Error?) -> Void) {
-        let urlString = "https://jsondata-ewow.onrender.com/json.json"
+        let urlString = "https://demo9952713.mockable.io/getEvents"
         
         guard let url = URL(string: urlString) else {
             completion(nil, NSError(domain: "Invalid URL", code: 0, userInfo: nil))
@@ -91,7 +91,7 @@ class DataManager {
     
     // Define the function to fetch event details
     func fetchEventDetails(eventID: String, completion: @escaping EventDetailCompletion) {
-        let urlString = "https://jsondata-ewow.onrender.com/json.json"
+        let urlString = "https://demo9952713.mockable.io/getEventDetails"
         guard let url = URL(string: urlString) else {
             completion(.failure(NSError(domain: "InvalidURL", code: 0, userInfo: nil)))
             return

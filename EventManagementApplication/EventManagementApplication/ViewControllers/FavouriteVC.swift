@@ -68,6 +68,10 @@ class FavouriteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             return cell
         }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        <#code#>
+    }
 
         // MARK: - UITableViewDelegate
 
