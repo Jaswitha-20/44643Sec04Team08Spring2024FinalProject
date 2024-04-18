@@ -219,13 +219,8 @@
 				8033E37F2BCADFB300C50362 /* Assets.xcassets */,
 				7C70F03E2BD0913800FB22E9 /* Main.storyboard */,
 				8033E3812BCADFB300C50362 /* LaunchScreen.storyboard */,
-				8033E38A2BCAE04800C50362 /* IntialVC.swift */,
+				FBB308882BD17723002932F4 /* ViewControllers */,
 				86809B302BD0B410004A54D9 /* DataManager.swift */,
-				8033E3A42BCAF0E500C50362 /* ForgotPasswordVC.swift */,
-				86809B2E2BD0B324004A54D9 /* FavouriteVC.swift */,
-				8033E3A52BCAF0E500C50362 /* LoginVC.swift */,
-				51821F1A2BD033F80093E323 /* BaseViewController.swift */,
-				86809B2C2BD0B30D004A54D9 /* EventHistoryVC.swift */,
 				51821F1D2BD033F90093E323 /* EventCell.swift */,
 				86809B362BD0B672004A54D9 /* ButtonExtension.swift */,
 				86809B3A2BD0B672004A54D9 /* ButtonWithShadow.swift */,
@@ -234,18 +229,10 @@
 				86809B372BD0B672004A54D9 /* DesignableViewBorder.swift */,
 				86809B3C2BD0B672004A54D9 /* GlobalPicker.swift */,
 				86809B382BD0B672004A54D9 /* SplitViewControllerUtility.swift */,
-				51821F1B2BD033F80093E323 /* EventDetailVC.swift */,
-				86809B2A2BD0B302004A54D9 /* ManageContactVC.swift */,
-				7C70F0802BD0A88700FB22E9 /* HomeVC.swift */,
-				86809B322BD0B44A004A54D9 /* BookingConfirmationVC.swift */,
-				51821F1C2BD033F90093E323 /* SettingVC.swift */,
-				86809B282BD0B2E5004A54D9 /* EventBookingVC.swift */,
 				51821F182BD033B40093E323 /* TableViewCell.swift */,
 				86809B342BD0B5E5004A54D9 /* UIViewControllerExt.swift */,
 				86809B162BD028F9004A54D9 /* ForgetPasswordManager.swift */,
 				7C70F08E2BD0B12900FB22E9 /* Map */,
-				8033E3A62BCAF0E500C50362 /* SignUpVC.swift */,
-				7C70F0852BD0AC8700FB22E9 /* CalendarVCViewController.swift */,
 				86809B182BD02B40004A54D9 /* FireStoreManager.swift */,
 				86809B1A2BD02C70004A54D9 /* Extensions.swift */,
 				86809B1E2BD0313C004A54D9 /* EventModel.swift */,
@@ -262,6 +249,27 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBB308882BD17723002932F4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8033E38A2BCAE04800C50362 /* IntialVC.swift */,
+				8033E3A42BCAF0E500C50362 /* ForgotPasswordVC.swift */,
+				86809B2E2BD0B324004A54D9 /* FavouriteVC.swift */,
+				8033E3A52BCAF0E500C50362 /* LoginVC.swift */,
+				51821F1A2BD033F80093E323 /* BaseViewController.swift */,
+				86809B2C2BD0B30D004A54D9 /* EventHistoryVC.swift */,
+				51821F1B2BD033F80093E323 /* EventDetailVC.swift */,
+				86809B2A2BD0B302004A54D9 /* ManageContactVC.swift */,
+				7C70F0802BD0A88700FB22E9 /* HomeVC.swift */,
+				86809B322BD0B44A004A54D9 /* BookingConfirmationVC.swift */,
+				51821F1C2BD033F90093E323 /* SettingVC.swift */,
+				86809B282BD0B2E5004A54D9 /* EventBookingVC.swift */,
+				8033E3A62BCAF0E500C50362 /* SignUpVC.swift */,
+				7C70F0852BD0AC8700FB22E9 /* CalendarVCViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
