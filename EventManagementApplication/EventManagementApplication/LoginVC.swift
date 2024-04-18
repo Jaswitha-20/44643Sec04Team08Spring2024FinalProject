@@ -9,7 +9,9 @@ import UIKit
 import AnimatedGradientView
 
 class LoginVC: UIViewController {
+    
     @IBOutlet weak var email: UITextField!
+    
     @IBOutlet weak var password: UITextField!
     
     var rememberMe: Bool = false
