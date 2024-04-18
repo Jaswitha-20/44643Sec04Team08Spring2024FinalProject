@@ -216,6 +216,9 @@
 			children = (
 				8033E3762BCADFB200C50362 /* AppDelegate.swift */,
 				8033E3782BCADFB200C50362 /* SceneDelegate.swift */,
+				8033E37F2BCADFB300C50362 /* Assets.xcassets */,
+				7C70F03E2BD0913800FB22E9 /* Main.storyboard */,
+				8033E3812BCADFB300C50362 /* LaunchScreen.storyboard */,
 				8033E38A2BCAE04800C50362 /* IntialVC.swift */,
 				86809B302BD0B410004A54D9 /* DataManager.swift */,
 				8033E3A42BCAF0E500C50362 /* ForgotPasswordVC.swift */,
@@ -248,9 +251,6 @@
 				86809B1E2BD0313C004A54D9 /* EventModel.swift */,
 				8033E3BE2BCAF29F00C50362 /* UserModel.swift */,
 				86809B1C2BD030AE004A54D9 /* UserDefaultsManager.swift */,
-				8033E37F2BCADFB300C50362 /* Assets.xcassets */,
-				7C70F03E2BD0913800FB22E9 /* Main.storyboard */,
-				8033E3812BCADFB300C50362 /* LaunchScreen.storyboard */,
 				8033E3842BCADFB300C50362 /* Info.plist */,
 				8033E3D82BCC4ACA00C50362 /* GoogleService-Info.plist */,
 			);
