@@ -278,7 +278,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxV-kQ-aLE">
                                                         <rect key="frame" x="0.0" y="5" width="361" height="50"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="fIm-0s-Tyr"/>
                                                         </constraints>
@@ -302,7 +302,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="fxV-kQ-aLE" firstAttribute="centerX" secondItem="2Eo-sQ-Ipq" secondAttribute="centerX" id="BfF-sD-oz6"/>
                                                     <constraint firstAttribute="height" constant="60" id="Gix-dx-kbr"/>
@@ -828,7 +828,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="mFS-qx-HKh" firstAttribute="leading" secondItem="aem-ZR-AoO" secondAttribute="leading" id="l7z-XL-1Xz"/>
                                                     <constraint firstAttribute="bottom" secondItem="mFS-qx-HKh" secondAttribute="bottom" constant="10" id="lHo-X7-in3"/>
@@ -879,7 +879,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2K-Pr-IKk" customClass="ButtonLayerSetup" customModule="EventManagementApplication" customModuleProvider="target">
                                                         <rect key="frame" x="105.66666666666669" y="45" width="150" height="50"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="150" id="1wi-Lq-hz1"/>
                                                             <constraint firstAttribute="height" constant="50" id="elr-Cl-f1w"/>
@@ -903,7 +903,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="m2K-Pr-IKk" firstAttribute="centerX" secondItem="fGz-AQ-CP3" secondAttribute="centerX" id="5nf-SU-Hyg"/>
                                                     <constraint firstAttribute="bottom" secondItem="m2K-Pr-IKk" secondAttribute="bottom" constant="5" id="8HP-QI-JMP"/>
