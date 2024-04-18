@@ -81,7 +81,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="HN7-9n-hoW" firstAttribute="centerX" secondItem="h2M-Ge-bQQ" secondAttribute="centerX" id="yXX-Za-Tda"/>
                                             <constraint firstItem="HN7-9n-hoW" firstAttribute="centerY" secondItem="h2M-Ge-bQQ" secondAttribute="centerY" id="zXq-vb-Z0K"/>
@@ -89,6 +89,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="wda-TZ-h93" firstAttribute="top" secondItem="Ujr-gD-Bxg" secondAttribute="bottom" id="2Ux-Bv-ktp"/>
                                     <constraint firstAttribute="trailing" secondItem="Ih1-zp-e0b" secondAttribute="trailing" id="8KD-IA-OgZ"/>
                                     <constraint firstAttribute="trailing" secondItem="h2M-Ge-bQQ" secondAttribute="trailing" id="XEa-bo-dl1"/>
                                     <constraint firstAttribute="trailing" secondItem="wda-TZ-h93" secondAttribute="trailing" id="ffk-S9-0Ff"/>
@@ -2053,7 +2054,7 @@
                                                             <constraint firstAttribute="width" constant="25" id="NQD-ad-dU0"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="beB-sY-ejj" userLabel="Time">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="6.00 PM - 8.00 PM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beB-sY-ejj" userLabel="Time">
                                                         <rect key="frame" x="44.333333333333485" y="4.3333333333334849" width="97" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>

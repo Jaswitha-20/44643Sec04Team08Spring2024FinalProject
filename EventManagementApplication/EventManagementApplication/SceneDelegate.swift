@@ -25,16 +25,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        var isLoggedIn = UserDefaultsManager.shared.isLoggedIn()
+        let isLoggedIn = UserDefaultsManager.shared.isLoggedIn()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if isLoggedIn {
          
-            let splitVC = storyboard.instantiateViewController(withIdentifier: "SplitViewController") as! UISplitViewController
-            window!.rootViewController = splitVC
-
+            let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeTabBarNavigation")
+            window!.rootViewController = homeVC
+          
         } else {
 
-            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginNavigation")
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "HomeNavigation")
             window!.rootViewController = loginVC
         }
         
@@ -42,9 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        SceneDelegate.shared = self
         self.myScene = scene
-
         self.loginCheckOrRestart()
     }
 

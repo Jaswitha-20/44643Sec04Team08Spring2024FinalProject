@@ -203,9 +203,78 @@ class FireStoreManager {
         }
     }
     
+    func addInFavorite(favBool: Bool, eventDetail: EventDetailData, organiser: Organizer, completion: @escaping (Bool) -> Void) {
+        let userId = UserDefaultsManager.shared.getDocumentId()
+        let documentReference = db.collection("FavouriteEvent").document(userId)
+        
+        // Create the organizer dictionary
+        let organizer: [String: Any] = [
+            "name": organiser.name ?? "",
+            "email": organiser.email ?? "",
+            "contact": organiser.contact ?? "",
+            "address": organiser.address ?? "",
+            "inField": organiser.inField ?? "",
+            "eventsDone": organiser.eventsDone ?? 0,
+            "rating": organiser.rating ?? 0.0
+        ]
+        
+        // Create the event data dictionary
+        let meetingData: [String: Any] = [
+            "event_title": eventDetail.event_title ?? "",
+            "description": eventDetail.description ?? "",
+            "date": eventDetail.date ?? "",
+            "location": eventDetail.location ?? "",
+            "guests_allowed": eventDetail.guests_allowed ?? 0,
+            "price": eventDetail.price ?? "",
+            "organizer": organizer
+        ]
+        
+        // Function to add or remove the meeting data from the "events" array field
+        func updateFavorite(favBool: Bool) {
+            let updateData = favBool ? FieldValue.arrayUnion([meetingData]) : FieldValue.arrayRemove([meetingData])
+            documentReference.updateData(["events": updateData]) { error in
+                if let error = error {
+                    print("Error updating favorites: \(error)")
+                    completion(false)
+                } else {
+                    let action = favBool ? "added to" : "removed from"
+                    print("Event \(action) favorites successfully")
+                    completion(true)
+                }
+            }
+        }
+        
+        // Check if the document exists before updating it
+        documentReference.getDocument { documentSnapshot, error in
+            if let error = error {
+                print("Error checking document existence: \(error)")
+                completion(false)
+                return
+            }
+            
+            if let documentSnapshot = documentSnapshot, documentSnapshot.exists {
+                // Document exists, proceed to update it
+                updateFavorite(favBool: favBool)
+            } else {
+                // Document does not exist, create it and then update
+                documentReference.setData(["events": FieldValue.arrayUnion([meetingData])]) { error in
+                    if let error = error {
+                        print("Error creating document: \(error)")
+                        completion(false)
+                    } else {
+                        print("Document created and event added to favorites successfully")
+                        completion(true)
+                    }
+                }
+            }
+        }
+    }
+
+    
     func getEventHistory(completion: @escaping ([EventDetailData]) -> Void) {
         
         let id = UserDefaultsManager.shared.getDocumentId()
+
         self.db.collection("BookEvent").whereField("userId", isEqualTo: id).getDocuments { (querySnapshot, error) in
                 if let error = error {
                     print("Error getting accommodation offers: \(error.localizedDescription)")
@@ -227,150 +296,52 @@ class FireStoreManager {
             }
     }
     
-//    func addCaseToFirestore(_ caseDetails: CaseDetails,completion: @escaping (Bool)->()) {
-//        let db = Firestore.firestore()
-//        let casesCollection = db.collection("CaseMatter")
-//        
-//        do {
-//            let caseData = try Firestore.Encoder().encode(caseDetails)
-//            
-//            casesCollection.addDocument(data: caseData) { error in
-//                if let error = error {
-//                    print("Error adding case: \(error)")
-//                    completion(false)
-//                } else {
-//                    completion(true)
-//                    print("Case added successfully!")
-//                }
-//            }
-//        } catch {
-//            completion(false)
-//            print("Error encoding case data: \(error)")
-//        }
-//    }
-    
-//    func fetchCaseDetails(completion: @escaping ([CaseDetails]) -> Void) {
-//            let casesRef = db.collection("CaseMatter")
-//
-//            casesRef.getDocuments { (snapshot, error) in
-//                if let error = error {
-//                    print("Error fetching documents: \(error)")
-//                    return
-//                }
-//
-//                var caseDetailsArray = [CaseDetails]()
-//
-//                guard let documents = snapshot?.documents else {
-//                    print("No documents found.")
-//                    completion([])
-//                    return
-//                }
-//
-//                for document in documents {
-//                    let data = document.data()
-//
-//                    let dateOfIncident = data["dateOfIncident"] as? String ?? ""
-//                    let caseType = data["caseType"] as? String ?? ""
-//                    let caseDescription = data["caseDescription"] as? String ?? ""
-//                    let statuteOfLimitationsDate = data["statuteOfLimitationsDate"] as? String ?? ""
-//                    let matterValue = data["matterValue"] as? String ?? ""
-//                    let attorneyFees = data["attorneyFees"] as? String ?? "0.0"
-//                    let courtName = data["courtName"] as? String ?? ""
-//                    let matterId = data["matterId"] as? String ?? ""
-//                    let caseTitle = data["caseTitle"] as? String ?? ""
-//                    let partyName = data["partyName"] as? String ?? ""
-//                    let partyId = data["partyId"] as? String ?? ""
-//                    let userId = UserDefaultsManager.shared.getDocumentId()
-//
-//                    let caseDetail = CaseDetails(dateOfIncident: dateOfIncident,
-//                                                 caseType: caseType,
-//                                                 caseDescription: caseDescription,
-//                                                 statuteOfLimitationsDate: statuteOfLimitationsDate,
-//                                                 matterValue: matterValue,
-//                                                 attorneyFees: attorneyFees,
-//                                                 courtName: courtName,
-//                                                 matterId: matterId,
-//                                                 caseTitle: caseTitle,
-//                                                 partyName: partyName,
-//                                                 userId: userId, partyId: partyId)
-//
-//                    caseDetailsArray.append(caseDetail)
-//                    completion(caseDetailsArray)
-//                }
-//
-//                print(caseDetailsArray)
-//            }
-//        }
-
-//    func fetchPartyDetails(completion: @escaping ([PartyDetails]) -> Void) {
-//        let casesRef = db.collection("PartyList")
-//
-//        casesRef.getDocuments { (snapshot, error) in
-//            if let error = error {
-//                print("Error fetching documents: \(error)")
-//                completion([])
-//                return
-//            }
-//
-//            var partyDetailsArray = [PartyDetails]()
-//
-//            guard let documents = snapshot?.documents else {
-//                print("No documents found.")
-//                completion([])
-//                return
-//            }
-//
-//            for document in documents {
-//                let data = document.data()
-//
-//                if var partyDetails = try? Firestore.Decoder().decode(PartyDetails.self, from: data) {
-//                    // Set the documentID property of the partyDetails object
-//                    partyDetails.documentID = document.documentID
-//                    partyDetailsArray.append(partyDetails)
-//                } else {
-//                    print("Error decoding party details for document ID: \(document.documentID)")
-//                }
-//            }
-//
-//            completion(partyDetailsArray)
-//        }
-//    }
+    func fetchFavoriteEvents(completion: @escaping ([EventDetailData]) -> Void) {
+        let userId = UserDefaultsManager.shared.getDocumentId()
+        let documentReference = db.collection("FavouriteEvent").document(userId)
+        
+        documentReference.getDocument { (documentSnapshot, error) in
+            if let error = error {
+                print("Error getting favorite events: \(error.localizedDescription)")
+                completion([])
+            } else if let documentSnapshot = documentSnapshot, documentSnapshot.exists {
+                // Retrieve the events array from the document
+                guard let eventsData = documentSnapshot.data()?["events"] as? [[String: Any]] else {
+                    // If there's no events field in the document, return an empty list
+                    completion([])
+                    return
+                }
+                
+                var eventDetailsList: [EventDetailData] = []
+                
+                // Use JSONDecoder to parse each event data dictionary into EventDetailData
+                let decoder = JSONDecoder()
+                
+                for eventData in eventsData {
+                    do {
+                        // Convert eventData dictionary to JSON data
+                        let jsonData = try JSONSerialization.data(withJSONObject: eventData, options: [])
+                        
+                        // Decode JSON data into EventDetailData using JSONDecoder
+                        let eventDetail = try decoder.decode(EventDetailData.self, from: jsonData)
+                        
+                        // Append to the list
+                        eventDetailsList.append(eventDetail)
+                    } catch {
+                        print("Error parsing EventDetailData: \(error)")
+                    }
+                }
+                
+                // Return the list of EventDetailData
+                completion(eventDetailsList)
+            } else {
+                print("Document does not exist or has no data")
+                completion([])
+            }
+        }
+    }
 
 
-    
-//    func addProfileScoreToFirestore(_ partyDetails: PartyDetails,completion: @escaping (Bool, String?)->()) {
-//        let db = Firestore.firestore()
-//        let casesCollection = db.collection("PartyList")
-//        
-//        do {
-//                let caseData = try Firestore.Encoder().encode(partyDetails)
-//                
-//                casesCollection.addDocument(data: caseData) { error in
-//                    if let error = error {
-//                        print("Error adding case: \(error)")
-//                        completion(false, nil)
-//                    } else {
-//                        // Retrieve the newly added document and its document ID
-//                        casesCollection.whereField("partyName", isEqualTo: partyDetails.partyName).getDocuments { snapshot, error in
-//                            if let error = error {
-//                                print("Error retrieving document: \(error)")
-//                                completion(false, nil)
-//                            } else if let document = snapshot?.documents.first {
-//                                let documentID = document.documentID
-//                                completion(true, documentID)
-//                                print("Case added successfully with document ID: \(documentID)")
-//                            } else {
-//                                completion(false, nil)
-//                                print("Failed to retrieve document ID.")
-//                            }
-//                        }
-//                    }
-//                }
-//            } catch {
-//                completion(false, nil)
-//                print("Error encoding case data: \(error)")
-//            }
-//    }
     
     func updateProfile(documentID: String, user: UserRegistrationModel, completion: @escaping (Bool) -> Void) {
         let query = db.collection("Users").document(documentID)

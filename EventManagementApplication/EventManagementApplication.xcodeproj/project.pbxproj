@@ -51,6 +51,20 @@
 		86809B1B2BD02C70004A54D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B1A2BD02C70004A54D9 /* Extensions.swift */; };
 		86809B1D2BD030AE004A54D9 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B1C2BD030AE004A54D9 /* UserDefaultsManager.swift */; };
 		86809B1F2BD0313C004A54D9 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B1E2BD0313C004A54D9 /* EventModel.swift */; };
+		86809B292BD0B2E5004A54D9 /* EventBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B282BD0B2E5004A54D9 /* EventBookingVC.swift */; };
+		86809B2B2BD0B302004A54D9 /* ManageContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B2A2BD0B302004A54D9 /* ManageContactVC.swift */; };
+		86809B2D2BD0B30D004A54D9 /* EventHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B2C2BD0B30D004A54D9 /* EventHistoryVC.swift */; };
+		86809B2F2BD0B324004A54D9 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B2E2BD0B324004A54D9 /* FavouriteVC.swift */; };
+		86809B312BD0B410004A54D9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B302BD0B410004A54D9 /* DataManager.swift */; };
+		86809B332BD0B44A004A54D9 /* BookingConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B322BD0B44A004A54D9 /* BookingConfirmationVC.swift */; };
+		86809B352BD0B5E5004A54D9 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B342BD0B5E5004A54D9 /* UIViewControllerExt.swift */; };
+		86809B3D2BD0B672004A54D9 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B362BD0B672004A54D9 /* ButtonExtension.swift */; };
+		86809B3E2BD0B672004A54D9 /* DesignableViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B372BD0B672004A54D9 /* DesignableViewBorder.swift */; };
+		86809B3F2BD0B672004A54D9 /* SplitViewControllerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B382BD0B672004A54D9 /* SplitViewControllerUtility.swift */; };
+		86809B402BD0B672004A54D9 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B392BD0B672004A54D9 /* DesignableView.swift */; };
+		86809B412BD0B672004A54D9 /* ButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B3A2BD0B672004A54D9 /* ButtonWithShadow.swift */; };
+		86809B422BD0B672004A54D9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B3B2BD0B672004A54D9 /* Color.swift */; };
+		86809B432BD0B672004A54D9 /* GlobalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86809B3C2BD0B672004A54D9 /* GlobalPicker.swift */; };
 		86A4EF5B2BCEDD78008ECF16 /* AnimatedGradientView in Frameworks */ = {isa = PBXBuildFile; productRef = 86A4EF5A2BCEDD78008ECF16 /* AnimatedGradientView */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +106,20 @@
 		86809B1A2BD02C70004A54D9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		86809B1C2BD030AE004A54D9 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		86809B1E2BD0313C004A54D9 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		86809B282BD0B2E5004A54D9 /* EventBookingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBookingVC.swift; sourceTree = "<group>"; };
+		86809B2A2BD0B302004A54D9 /* ManageContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageContactVC.swift; sourceTree = "<group>"; };
+		86809B2C2BD0B30D004A54D9 /* EventHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHistoryVC.swift; sourceTree = "<group>"; };
+		86809B2E2BD0B324004A54D9 /* FavouriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		86809B302BD0B410004A54D9 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		86809B322BD0B44A004A54D9 /* BookingConfirmationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmationVC.swift; sourceTree = "<group>"; };
+		86809B342BD0B5E5004A54D9 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		86809B362BD0B672004A54D9 /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		86809B372BD0B672004A54D9 /* DesignableViewBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableViewBorder.swift; sourceTree = "<group>"; };
+		86809B382BD0B672004A54D9 /* SplitViewControllerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewControllerUtility.swift; sourceTree = "<group>"; };
+		86809B392BD0B672004A54D9 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		86809B3A2BD0B672004A54D9 /* ButtonWithShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithShadow.swift; sourceTree = "<group>"; };
+		86809B3B2BD0B672004A54D9 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		86809B3C2BD0B672004A54D9 /* GlobalPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,14 +217,28 @@
 				8033E3762BCADFB200C50362 /* AppDelegate.swift */,
 				8033E3782BCADFB200C50362 /* SceneDelegate.swift */,
 				8033E38A2BCAE04800C50362 /* IntialVC.swift */,
+				86809B302BD0B410004A54D9 /* DataManager.swift */,
 				8033E3A42BCAF0E500C50362 /* ForgotPasswordVC.swift */,
+				86809B2E2BD0B324004A54D9 /* FavouriteVC.swift */,
 				8033E3A52BCAF0E500C50362 /* LoginVC.swift */,
 				51821F1A2BD033F80093E323 /* BaseViewController.swift */,
+				86809B2C2BD0B30D004A54D9 /* EventHistoryVC.swift */,
 				51821F1D2BD033F90093E323 /* EventCell.swift */,
+				86809B362BD0B672004A54D9 /* ButtonExtension.swift */,
+				86809B3A2BD0B672004A54D9 /* ButtonWithShadow.swift */,
+				86809B3B2BD0B672004A54D9 /* Color.swift */,
+				86809B392BD0B672004A54D9 /* DesignableView.swift */,
+				86809B372BD0B672004A54D9 /* DesignableViewBorder.swift */,
+				86809B3C2BD0B672004A54D9 /* GlobalPicker.swift */,
+				86809B382BD0B672004A54D9 /* SplitViewControllerUtility.swift */,
 				51821F1B2BD033F80093E323 /* EventDetailVC.swift */,
+				86809B2A2BD0B302004A54D9 /* ManageContactVC.swift */,
 				7C70F0802BD0A88700FB22E9 /* HomeVC.swift */,
+				86809B322BD0B44A004A54D9 /* BookingConfirmationVC.swift */,
 				51821F1C2BD033F90093E323 /* SettingVC.swift */,
+				86809B282BD0B2E5004A54D9 /* EventBookingVC.swift */,
 				51821F182BD033B40093E323 /* TableViewCell.swift */,
+				86809B342BD0B5E5004A54D9 /* UIViewControllerExt.swift */,
 				86809B162BD028F9004A54D9 /* ForgetPasswordManager.swift */,
 				7C70F08E2BD0B12900FB22E9 /* Map */,
 				8033E3A62BCAF0E500C50362 /* SignUpVC.swift */,
@@ -316,32 +358,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86809B2D2BD0B30D004A54D9 /* EventHistoryVC.swift in Sources */,
+				86809B312BD0B410004A54D9 /* DataManager.swift in Sources */,
 				7C70F09F2BD0B12900FB22E9 /* MapKitSearchViewController.swift in Sources */,
 				51821F192BD033B50093E323 /* TableViewCell.swift in Sources */,
 				51821F202BD033F90093E323 /* SettingVC.swift in Sources */,
+				86809B292BD0B2E5004A54D9 /* EventBookingVC.swift in Sources */,
 				8033E3772BCADFB200C50362 /* AppDelegate.swift in Sources */,
+				86809B3D2BD0B672004A54D9 /* ButtonExtension.swift in Sources */,
 				7C70F0A72BD0B12900FB22E9 /* CLPlacemark.swift in Sources */,
 				7C70F0A82BD0B12900FB22E9 /* MKMapView.swift in Sources */,
 				7C70F0812BD0A88700FB22E9 /* HomeVC.swift in Sources */,
+				86809B352BD0B5E5004A54D9 /* UIViewControllerExt.swift in Sources */,
 				7C70F0A22BD0B12900FB22E9 /* SearchCompletionTableViewCell.swift in Sources */,
+				86809B422BD0B672004A54D9 /* Color.swift in Sources */,
+				86809B432BD0B672004A54D9 /* GlobalPicker.swift in Sources */,
 				8033E3A82BCAF0E500C50362 /* LoginVC.swift in Sources */,
 				7C70F0A42BD0B12900FB22E9 /* MapItemTableViewCell.swift in Sources */,
 				7C70F0A32BD0B12900FB22E9 /* MapTabsView.swift in Sources */,
 				7C70F0A92BD0B12900FB22E9 /* CLLocationCoordinate2D.swift in Sources */,
+				86809B2B2BD0B302004A54D9 /* ManageContactVC.swift in Sources */,
 				8033E3792BCADFB200C50362 /* SceneDelegate.swift in Sources */,
 				51821F212BD033F90093E323 /* EventCell.swift in Sources */,
+				86809B3E2BD0B672004A54D9 /* DesignableViewBorder.swift in Sources */,
 				86809B192BD02B40004A54D9 /* FireStoreManager.swift in Sources */,
 				7C70F0862BD0AC8700FB22E9 /* CalendarVCViewController.swift in Sources */,
 				51821F1E2BD033F90093E323 /* BaseViewController.swift in Sources */,
 				86809B1D2BD030AE004A54D9 /* UserDefaultsManager.swift in Sources */,
+				86809B412BD0B672004A54D9 /* ButtonWithShadow.swift in Sources */,
 				86809B172BD028F9004A54D9 /* ForgetPasswordManager.swift in Sources */,
+				86809B402BD0B672004A54D9 /* DesignableView.swift in Sources */,
 				86809B1B2BD02C70004A54D9 /* Extensions.swift in Sources */,
 				7C70F0A52BD0B12900FB22E9 /* BottomSheetView.swift in Sources */,
 				51821F1F2BD033F90093E323 /* EventDetailVC.swift in Sources */,
+				86809B332BD0B44A004A54D9 /* BookingConfirmationVC.swift in Sources */,
 				8033E3A72BCAF0E500C50362 /* ForgotPasswordVC.swift in Sources */,
 				8033E38B2BCAE04800C50362 /* IntialVC.swift in Sources */,
 				8033E3A92BCAF0E500C50362 /* SignUpVC.swift in Sources */,
+				86809B2F2BD0B324004A54D9 /* FavouriteVC.swift in Sources */,
 				86809B1F2BD0313C004A54D9 /* EventModel.swift in Sources */,
+				86809B3F2BD0B672004A54D9 /* SplitViewControllerUtility.swift in Sources */,
 				8033E3BF2BCAF29F00C50362 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

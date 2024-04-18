@@ -42,6 +42,7 @@ struct EventDetailData: Codable {
     let event_title: String?
     let description: String?
     let date: String?
+    let time: String?
     let location: String?
     let guests_allowed: Int?
     let price: Int?
