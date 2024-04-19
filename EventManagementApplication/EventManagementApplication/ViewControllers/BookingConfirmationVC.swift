@@ -10,7 +10,11 @@ import AnimatedGradientView
 
 class BookingConfirmationVC: UIViewController {
 
-    var eventDetails: String = "Event details to share"
+    var eventTitle: String = ""
+            var location: String = ""
+            var date: String = ""
+            var time: String = ""
+            //var price: String = ""
     
     
     override func viewDidLoad() {
@@ -30,9 +34,10 @@ class BookingConfirmationVC: UIViewController {
     @IBAction func shareButton(_ sender: UIBarButtonItem) {
         
         // Create an activity view controller with the event details
-                let activityViewController = UIActivityViewController(activityItems: [eventDetails], applicationActivities: nil)
-                // Present the activity view controller
-                present(activityViewController, animated: true, completion: nil)
+               let eventDetails = "Event Title: \(eventTitle)\nLocation: \(location)\nDate: \(date)\nTime: \(time)"
+                  let activityViewController = UIActivityViewController(activityItems: [eventDetails], applicationActivities: nil)
+                  present(activityViewController, animated: true, completion: nil)
+               
         
         
         
