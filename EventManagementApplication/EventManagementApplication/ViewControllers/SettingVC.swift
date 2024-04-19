@@ -13,7 +13,7 @@ class SettingVC: BaseViewController {
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var email: UITextField!
-    
+    var password = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,7 @@ class SettingVC: BaseViewController {
                         self.phone.text = data["phone"] as? String ?? ""
                         self.lastName.text = data["lastname"] as? String ?? ""
                         self.email.text = data["email"] as? String ?? ""
+                        self.password = data["password"] as? String ?? ""
                     }
                 } else {
                     print("Document does not exist")
@@ -54,6 +55,16 @@ class SettingVC: BaseViewController {
         SceneDelegate.shared!.loginCheckOrRestart()
     }
 
+    @IBAction func onUpdate(_ sender: UIButton) {
+            let documentid = UserDefaultsManager.shared.getDocumentId()
+        let userData = UserRegistrationModel(firstname: self.firstname?.text, lastname: self.lastName?.text, email: self.email?.text, phone: self.phone?.text, password: self.password)
+        FireStoreManager.shared.updateProfile(documentID: documentid, user: userData) { success in
+                if success {
+                    showAlerOnTop(message: "Profile Updated Successfully")
+                }
+            }
+        
+    }
     
 //    @IBAction func onEdit(_ sender: Any) {
 //        if !editBool {
