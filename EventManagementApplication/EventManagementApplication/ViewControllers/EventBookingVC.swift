@@ -9,8 +9,11 @@ import UIKit
 import EventKit
 import MapKit
 import AnimatedGradientView
+import ImageSlideshow
+import ImageSlideshowSDWebImage
+import SDWebImage
 
-class EventBookingVC: UIViewController {
+class EventBookingVC: UIViewController, ImageSlideshowDelegate {
     @IBOutlet var termButton: UIButton!
     @IBOutlet var continueButton: UIButton!
     @IBOutlet var locationButton: UIButton!
@@ -25,10 +28,11 @@ class EventBookingVC: UIViewController {
     @IBOutlet var organiserContact: UILabel!
     @IBOutlet var organiserAddress: UILabel!
     
+    @IBOutlet weak var slideShow: ImageSlideshow!
     
       var rememberMe: Bool = false
-      var eventData : EventDetailData?
-      var organiserDetail: Organizer?
+      var eventData : EventData?
+     // var organiserDetail: Organizer?
       var favEventBool = false
       var startTime: Date?
           var endTime: Date?
@@ -66,7 +70,7 @@ class EventBookingVC: UIViewController {
           termButton.setImage(UIImage(named: "uncheck"), for: .normal)
           
           termButton.isSelected = rememberMe
-          
+          setupImageSlideShow()
           self.setupView()
   //        self.favEventBool = self.eventData?.fav?.contains(UserDefaultsManager.shared.getEmail().lowercased()) ?? false
   //
@@ -77,6 +81,32 @@ class EventBookingVC: UIViewController {
   //        }
       }
       
+    func setupImageSlideShow() {
+        
+        let sdWebImageSource = eventData?.image!.compactMap { billboard -> SDWebImageSource? in
+            if  let url =  URL(string: billboard.encodedURL()) {
+                return SDWebImageSource(url: url)
+            }
+            return nil
+        }
+        
+        slideShow.slideshowInterval = 3.0
+        slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .bottom)
+        slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
+        
+        let pageControl = UIPageControl()
+        pageControl.currentPageIndicatorTintColor = UIColor.red
+        pageControl.pageIndicatorTintColor = UIColor.lightGray
+        
+        pageControl.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+    
+        slideShow.pageIndicator = pageControl
+        slideShow.activityIndicator = DefaultActivityIndicator()
+        slideShow.delegate = self
+        slideShow.setImageInputs(sdWebImageSource ?? [])
+        
+    }
+    
       
       
       func setupTimePickerAccessoryView() {
@@ -99,18 +129,18 @@ class EventBookingVC: UIViewController {
             self.date.isUserInteractionEnabled = false
             self.locationButton.isUserInteractionEnabled = false
         } else {
-            showAlerOnTop(message: "You can update Event Date and Location")
+            globalAlart(message: "You can update Event Date and Location")
         }
         
-        self.eventName.text = eventData?.event_title
+        self.eventName.text = eventData?.organizerName
         self.location.text = eventData?.location
         self.date.text = eventData?.date
-        self.time.text = eventData?.time
-        self.price.text = "\(String(describing: eventData?.price == 0 ? 100 : eventData?.price))"
-        self.organiserName.text = "Name : \(organiserDetail?.name ?? "")"
-        self.organiserEmail.text = "Email : \(organiserDetail?.email ?? "")"
-        self.organiserContact.text = "Contact : \(organiserDetail?.contact ?? "")"
-        self.organiserAddress.text = "Address : \(organiserDetail?.address ?? "")"
+       // self.time.text = eventData?.time
+        self.price.text = "\(eventData?.price ?? 100)"
+        self.organiserName.text = "Name : \(eventData?.organizerName ?? "")"
+        self.organiserEmail.text = "Email : \(eventData?.email ?? "")"
+        self.organiserContact.text = "Contact : \(eventData?.contact ?? "")"
+        self.organiserAddress.text = "Address : \(eventData?.address ?? "")"
         
         self.requestCalendarPermission { sucess in
             if sucess{
@@ -161,14 +191,14 @@ class EventBookingVC: UIViewController {
     
     @IBAction func onBooking(_ sender: Any) {
         if !rememberMe {
-            showAlerOnTop(message: "Please select terms and condition.")
+            globalAlart(message: "Please select terms and condition.")
             return
         } else {
-            FireStoreManager.shared.bookEventDetail(eventDetail: eventData!, organiser: organiserDetail!) { success in
+            FireStoreManager.shared.bookEventDetail(eventDetail: eventData!) { success in
                 if success {
                     self.addEventToCalendar(eventDetail: self.eventData!) { successBool, error in
                         if successBool {
-                            showAlerOnTop(message: "Event Booking Confirmed. The event has been added to your calendar.")
+                            globalAlart(message: "Event Booking Confirmed. The event has been added to your calendar.")
                             DispatchQueue.main.async {
                                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookingConfirmationVC") as! BookingConfirmationVC
                                 self.navigationController?.pushViewController(vc, animated: true)
@@ -184,7 +214,7 @@ class EventBookingVC: UIViewController {
         let isCurrentlyFav = favEventBool
         let newFavState = !isCurrentlyFav
 
-        FireStoreManager.shared.addInFavorite(favBool: newFavState, eventDetail: self.eventData!, organiser: self.organiserDetail!) { success in
+        FireStoreManager.shared.addInFavorite(favBool: newFavState, eventDetail: self.eventData!) { success in
             if success {
                 let heartImageName = newFavState ? "heart.fill" : "heart"
                 self.favButton.setImage(UIImage(systemName: heartImageName), for: .normal)
@@ -210,7 +240,7 @@ extension EventBookingVC {
         }
     }
 
-    func addEventToCalendar(eventDetail: EventDetailData, completion: @escaping (Bool, Error?) -> Void) {
+    func addEventToCalendar(eventDetail: EventData, completion: @escaping (Bool, Error?) -> Void) {
         let eventStore = EKEventStore()
         
         // Make sure you have permission to access the calendar
@@ -226,7 +256,7 @@ extension EventBookingVC {
                     print("Converted date: \(eventEndDate)")
                     let event = EKEvent(eventStore: eventStore)
                     
-                    event.title = eventDetail.event_title
+                    event.title = eventDetail.organizerName
                     event.notes = eventDetail.description
                     event.startDate = eventDate
                     event.endDate = eventEndDate

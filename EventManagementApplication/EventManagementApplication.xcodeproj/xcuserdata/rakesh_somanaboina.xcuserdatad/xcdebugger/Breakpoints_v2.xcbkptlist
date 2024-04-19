@@ -14,58 +14,10 @@
             filePath = "EventManagementApplication/DataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "fetchOrganiserDataFromAPI(completion:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9E95F68B-9666-4768-8261-A9EF1D8CACB0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventManagementApplication/DataManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "fetchOrganiserDataFromAPI(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9E95F68B-9666-4768-8261-A9EF1D8CACB0 - 14f44e616657e3bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventManagementApplication.DataManager.fetchOrganiserDataFromAPI(completion: (Swift.Optional&lt;Swift.Array&lt;EventManagementApplication.Organizer&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventManagementApplication"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rakesh_somanaboina/Documents/latestProjectFolder/44643Sec04Team08Spring2024FinalProject/EventManagementApplication/EventManagementApplication/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "600">
-               </Location>
-               <Location
-                  uuid = "9E95F68B-9666-4768-8261-A9EF1D8CACB0 - 14f44e616657e3bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventManagementApplication.DataManager.fetchOrganiserDataFromAPI(completion: (Swift.Optional&lt;Swift.Array&lt;EventManagementApplication.Organizer&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventManagementApplication"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rakesh_somanaboina/Documents/latestProjectFolder/44643Sec04Team08Spring2024FinalProject/EventManagementApplication/EventManagementApplication/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "584">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

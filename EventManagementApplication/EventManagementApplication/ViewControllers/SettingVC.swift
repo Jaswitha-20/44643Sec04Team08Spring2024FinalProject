@@ -60,7 +60,7 @@ class SettingVC: BaseViewController {
         let userData = UserRegistrationModel(firstname: self.firstname?.text, lastname: self.lastName?.text, email: self.email?.text, phone: self.phone?.text, password: self.password)
         FireStoreManager.shared.updateProfile(documentID: documentid, user: userData) { success in
                 if success {
-                    showAlerOnTop(message: "Profile Updated Successfully")
+                    globalAlart(message: "Profile Updated Successfully")
                 }
             }
         

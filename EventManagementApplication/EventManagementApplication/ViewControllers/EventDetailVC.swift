@@ -7,11 +7,12 @@
 
 import UIKit
 import AnimatedGradientView
+import SDWebImage
 
 class EventDetailVC: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     var eventIdStr = ""
-    var eventDetails: [EventDetailData] = []
+    var eventDetails: [EventData] = []
 
     var organiserDetail: Organizer?
     
@@ -25,7 +26,7 @@ class EventDetailVC: UIViewController, UICollectionViewDelegate {
                                                     (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
                 view.addSubview(animatedGradient)
                 view.sendSubviewToBack(animatedGradient)
-        fetchEventDetails()
+    //    fetchEventDetails()
         
         
         let layout = CollectionViewFlowLayout()
@@ -34,25 +35,26 @@ class EventDetailVC: UIViewController, UICollectionViewDelegate {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(EventDetailCell.self, forCellWithReuseIdentifier: "EventDetailCell")
+        self.collectionView.reloadData()
     }
     
-    func fetchEventDetails() {
-        DataManager.shared.fetchEventDetails(eventID: eventIdStr) { result in
-            switch result {
-            case .success(let eventDetailResponse):
-                if let eventData = eventDetailResponse.data {
-                    self.eventDetails = eventData
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-                } else {
-                    print("No event data found")
-                }
-            case .failure(let error):
-                print("Error fetching event details: \(error)")
-            }
-        }
-    }
+//    func fetchEventDetails() {
+//        DataManager.shared.fetchEventDetails(eventID: eventIdStr) { result in
+//            switch result {
+//            case .success(let eventDetailResponse):
+//                if let eventData = eventDetailResponse.data {
+//                    self.eventDetails = eventData
+//                    DispatchQueue.main.async {
+//                        self.collectionView.reloadData()
+//                    }
+//                } else {
+//                    print("No event data found")
+//                }
+//            case .failure(let error):
+//                print("Error fetching event details: \(error)")
+//            }
+//        }
+//    }
 }
 
 extension EventDetailVC: UICollectionViewDataSource {
@@ -63,8 +65,15 @@ extension EventDetailVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCell", for: indexPath) as! EventCell
         let eventDetail = eventDetails[indexPath.item]
-        cell.titleLabel.text = eventDetail.event_title
-        cell.eventImage.image = UIImage(named: "bday")
+        cell.titleLabel.text = (eventDetail.organizerName ?? "")
+        cell.titleLabel.numberOfLines = 1
+        cell.price?.text =  "Budget : \(eventDetail.price ?? 0)"
+        
+      
+        let imageUrl = URL(string:eventDetail.image?.first ?? "")
+        cell.eventImage.sd_setImage(with:imageUrl, placeholderImage: UIImage(named: "no_image"),options: SDWebImageOptions(rawValue: 0), completed: { (img, err, cacheType, imgURL) in
+        })
+            
         return cell
     }
     
@@ -72,10 +81,14 @@ extension EventDetailVC: UICollectionViewDataSource {
         let eventDetail = eventDetails[indexPath.item]
         let vc = storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
         vc.eventData = eventDetail
-        vc.organiserDetail = organiserDetail
+      //  vc.organiserDetail = organiserDetail
         navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: 250)
+    }
 
 // Assuming you have set up EventDetailCell class
 class EventDetailCell: UICollectionViewCell {

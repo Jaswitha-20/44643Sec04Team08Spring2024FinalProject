@@ -60,8 +60,7 @@ class DataManager {
                completion(nil, error)
                return
            }
-           
-           guard let data = data else {
+                      guard let data = data else {
                completion(nil, NSError(domain: "No data received", code: 0, userInfo: nil))
                return
            }

@@ -46,49 +46,49 @@ class SignUpVC: UIViewController {
     func validate() ->Bool {
        
         if(self.email.text!.isEmpty) {
-             showAlerOnTop(message: "Please enter email.")
+            globalAlart(message: "Please enter email.")
             return false
         }
         
         if !email.text!.emailIsCorrect() {
-            showAlerOnTop(message: "Please enter valid email id")
+            globalAlart(message: "Please enter valid email id")
             return false
         }
     
               
         if(self.password.text!.isEmpty) {
-             showAlerOnTop(message: "Please enter password.")
+            globalAlart(message: "Please enter password.")
             return false
         }
         
         if(self.confirmPassword.text!.isEmpty) {
-             showAlerOnTop(message: "Please enter confirm password.")
+            globalAlart(message: "Please enter confirm password.")
             return false
         }
         
            if(self.password.text! != self.confirmPassword.text!) {
-             showAlerOnTop(message: "Password doesn't match")
+               globalAlart(message: "Password doesn't match")
             return false
         }
         
         if(self.password.text!.count < 5 || self.password.text!.count > 10 ) {
             
-             showAlerOnTop(message: "Password  length shoud be 5 to 10")
+            globalAlart(message: "Password  length shoud be 5 to 10")
             return false
         }
         
         if(self.firstname.text!.isEmpty) {
-             showAlerOnTop(message: "Please enter first name.")
+            globalAlart(message: "Please enter first name.")
             return false
         }
         
         if(self.lastname.text!.isEmpty) {
-             showAlerOnTop(message: "Please enter last name.")
+            globalAlart(message: "Please enter last name.")
             return false
         }
         
         if(self.phone.text!.isEmpty) {
-             showAlerOnTop(message: "Please enter phone.")
+            globalAlart(message: "Please enter phone.")
             return false
         }
         

@@ -1839,37 +1839,51 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCell" id="8ol-dj-dOX" customClass="EventCell" customModule="EventManagementApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="220"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pVD-yv-D4w">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="240"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpf-HZ-QON" customClass="DesignableView" customModule="EventManagementApplication" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="5" width="160" height="210"/>
+                                                    <rect key="frame" x="5" y="5" width="160" height="230"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="9pB-wH-adM">
-                                                            <rect key="frame" x="5" y="5" width="150" height="200"/>
+                                                            <rect key="frame" x="5" y="5" width="150" height="220"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personal" translatesAutoresizingMaskIntoConstraints="NO" id="bPH-vA-1yW">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="150" id="OuJ-JQ-28m"/>
+                                                                        <constraint firstAttribute="height" constant="120" id="OuJ-JQ-28m"/>
                                                                         <constraint firstAttribute="width" constant="150" id="sai-Vv-p2v"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thv-N1-yfx">
-                                                                    <rect key="frame" x="0.0" y="150" width="150" height="50"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="sYy-Wj-0mO"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="56I-vL-7tD">
+                                                                    <rect key="frame" x="0.0" y="120" width="150" height="100"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-cJ-Ujj">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="50" id="KUK-MZ-VOb"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nG-oP-35t">
+                                                                            <rect key="frame" x="0.0" y="50" width="150" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="50" id="0ET-mk-ReR"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="Thv-N1-yfx" firstAttribute="leading" secondItem="9pB-wH-adM" secondAttribute="leading" id="Tgt-gR-g4u"/>
+                                                                <constraint firstItem="56I-vL-7tD" firstAttribute="leading" secondItem="9pB-wH-adM" secondAttribute="leading" id="2wU-eZ-fUs"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
@@ -1905,7 +1919,8 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="eventImage" destination="bPH-vA-1yW" id="Tf8-fg-B05"/>
-                                            <outlet property="titleLabel" destination="Thv-N1-yfx" id="0CP-4f-xNu"/>
+                                            <outlet property="price" destination="4nG-oP-35t" id="qm1-T1-q7S"/>
+                                            <outlet property="titleLabel" destination="cb6-cJ-Ujj" id="aVW-qW-49u"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1986,7 +2001,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-0s-6Zb">
                                 <rect key="frame" x="5" y="133" width="383" height="250"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdv-aA-fhC">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdv-aA-fhC" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                         <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="250"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bday" translatesAutoresizingMaskIntoConstraints="NO" id="Leg-FT-wSL">
@@ -2287,6 +2302,7 @@
                         <outlet property="organiserEmail" destination="lMB-DZ-Vl1" id="GIJ-6I-QIU"/>
                         <outlet property="organiserName" destination="ClV-a1-Exh" id="BqL-wp-JVC"/>
                         <outlet property="price" destination="jbG-Ge-gHA" id="pBD-Ic-R3s"/>
+                        <outlet property="slideShow" destination="Gdv-aA-fhC" id="TWI-dF-adk"/>
                         <outlet property="termButton" destination="KvR-Ge-A1h" id="zkd-BQ-nk0"/>
                         <outlet property="time" destination="beB-sY-ejj" id="koO-4f-qLV"/>
                     </connections>

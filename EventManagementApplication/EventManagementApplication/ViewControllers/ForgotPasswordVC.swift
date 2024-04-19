@@ -25,7 +25,7 @@ class ForgotPasswordVC: UIViewController {
     
     @IBAction func onSend(_ sender: Any) {
         if(email.text!.isEmpty) {
-            showAlerOnTop(message: "Please enter your email id.")
+            globalAlart(message: "Please enter your email id.")
             return
         }
         else{

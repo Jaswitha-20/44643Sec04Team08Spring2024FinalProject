@@ -12,7 +12,7 @@ class EventHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noData: UILabel!
 
-    var eventRecord: [EventDetailData] = []
+    var eventRecord: [EventData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +63,7 @@ class EventHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
             
-            cell.setData(title: eventRecord.event_title ?? "", location: eventRecord.location ?? "", description: "", date: eventRecord.date ?? "")
+            cell.setData(title: eventRecord.organizerName ?? "", location: eventRecord.location ?? "", description: "", date: eventRecord.date ?? "")
             
             return cell
         }
@@ -71,12 +71,42 @@ class EventHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         // MARK: - UITableViewDelegate
 
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           let eventRecord = eventRecord[indexPath.row]
+            let eventRecord = eventRecord[indexPath.row]
 
-            let vc = storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
-            vc.eventData = eventRecord
-            vc.organiserDetail = eventRecord.organizer
-            vc.isHistory = true
-            navigationController?.pushViewController(vc, animated: true)
-        }
-}
+            
+              if(DataManager.shared.organizers.isEmpty) {
+                  
+                  DataManager.shared.fetchOrganiserDataFromAPI(completion: {_,_ in
+                      
+                      
+                      let event = getEvent(selectedId: eventRecord.organizerId!)
+                     
+                      
+                      let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
+                      
+                      vc.eventData = event
+                    
+                      vc.isHistory = true
+                      self.navigationController?.pushViewController(vc, animated: true)
+                      
+                  })
+              }else {
+                  
+                  
+                  let event = getEvent(selectedId: eventRecord.organizerId!)
+                 
+                  
+                  let vc = storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
+                  
+                  vc.eventData = event
+                
+                  vc.isHistory = true
+                  navigationController?.pushViewController(vc, animated: true)
+                  
+                  
+              }
+              
+             
+             
+       }
+ }

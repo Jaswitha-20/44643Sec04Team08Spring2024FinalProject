@@ -11,6 +11,7 @@ class EventCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     
+    @IBOutlet weak var price: UILabel!
     func configure(with event: Event) {
         titleLabel.text = event.title
     }
