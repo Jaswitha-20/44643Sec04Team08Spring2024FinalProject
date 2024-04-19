@@ -34,12 +34,12 @@ class LoginVC: UIViewController {
     
     @IBAction func onLogin(_ sender: Any) {
         if(email.text!.isEmpty) {
-            showAlerOnTop(message: "Please enter your email id.")
+            globalAlart(message: "Please enter your email id.")
             return
         }
         
         if(self.password.text!.isEmpty) {
-            showAlerOnTop(message: "Please enter your password.")
+            globalAlart(message: "Please enter your password.")
             return
         }
         else{
