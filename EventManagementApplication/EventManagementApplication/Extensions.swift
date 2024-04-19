@@ -17,6 +17,14 @@ extension String {
     }
 }
 
+extension String {
+    func encodedURL() -> String {
+        
+        return self.replacingOccurrences(of: " ", with: "%20")
+        //return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    }
+}
+
 extension UIColor {
     convenience init(hex: UInt32, alpha: CGFloat = 1.0) {
         let red = CGFloat((hex & 0xFF0000) >> 16) / 255.0
@@ -27,33 +35,15 @@ extension UIColor {
     }
 }
 
-
-extension String {
-    func encodedURL() -> String {
-        
-        return self.replacingOccurrences(of: " ", with: "%20")
-        //return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-    }
-}
-
-extension UITableView {
-    
-    func registerCells(_ cells : [UITableViewCell.Type]) {
-        for cell in cells {
-            self.register(UINib(nibName: String(describing: cell), bundle: Bundle.main), forCellReuseIdentifier: String(describing: cell))
-        }
-    }
-}
-
-
-
-func showConfirmationAlert(message: String, yesHandler: ((UIAlertAction) -> Void)?) {
-        let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: yesHandler)
-        let noAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
-        alertController.addAction(yesAction)
-        alertController.addAction(noAction)
-        UIApplication.topViewController()!.present(alertController, animated: true, completion: nil)
+func globalAlart(message:String){
+   DispatchQueue.main.async {
+   let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
+   let action = UIAlertAction(title: "Ok", style: .default) { (alert) in
+      // completion?(true)
+   }
+   alert.addAction(action)
+   UIApplication.topViewController()!.present(alert, animated: true, completion: nil)
+   }
 }
 
 func showOkAlertAnyWhereWithCallBack(message:String,completion:@escaping () -> Void){
@@ -66,6 +56,15 @@ func showOkAlertAnyWhereWithCallBack(message:String,completion:@escaping () -> V
    UIApplication.topViewController()!.present(alert, animated: true, completion: nil)
    }
   
+}
+
+func showConfirmationAlert(message: String, yesHandler: ((UIAlertAction) -> Void)?) {
+        let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: yesHandler)
+        let noAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        UIApplication.topViewController()!.present(alertController, animated: true, completion: nil)
 }
 
 extension UIApplication {
@@ -85,6 +84,19 @@ extension UIApplication {
     }
 }
 
+
+
+
+
+extension UITableView {
+    
+    func registerCells(_ cells : [UITableViewCell.Type]) {
+        for cell in cells {
+            self.register(UINib(nibName: String(describing: cell), bundle: Bundle.main), forCellReuseIdentifier: String(describing: cell))
+        }
+    }
+}
+
  
 extension UICollectionView {
     
@@ -95,13 +107,4 @@ extension UICollectionView {
     }
 }
 
-func showAlerOnTop(message:String){
-   DispatchQueue.main.async {
-   let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
-   let action = UIAlertAction(title: "Ok", style: .default) { (alert) in
-      // completion?(true)
-   }
-   alert.addAction(action)
-   UIApplication.topViewController()!.present(alert, animated: true, completion: nil)
-   }
-}
+ 

@@ -95,17 +95,57 @@ extension HomeVC: UICollectionViewDataSource {
         // Configure the cell with event data
         cell.titleLabel.text = event.title
         if indexPath.section == 0 {
-            cell.eventImage.image = UIImage(named: "coporate")
+            
+           
+            if(indexPath.row == 0) {
+                cell.eventImage.image = UIImage(named: "Conference")
+            }
+            
+            if(indexPath.row == 1) {
+                cell.eventImage.image = UIImage(named: "senimar")
+            }
+            
+            if(indexPath.row == 2) {
+                cell.eventImage.image = UIImage(named: "webinar")
+            }
+            
+            
         }
+        
+        
         else if indexPath.section == 1 {
-            cell.eventImage.image = UIImage(named: "personal")
+            
+            if(indexPath.row == 0) {
+                cell.eventImage.image = UIImage(named: "Birthday")
+            }
+            
+            if(indexPath.row == 1) {
+                cell.eventImage.image = UIImage(named: "Wedding")
+            }
+            
+            if(indexPath.row == 2) {
+                cell.eventImage.image = UIImage(named: "Anniversary")
+            }
+           
         }
         else if indexPath.section == 2 {
-            cell.eventImage.image = UIImage(named: "public")
+            
+            if(indexPath.row == 0) {
+                cell.eventImage.image = UIImage(named: "Press")
+            }
+            
+            if(indexPath.row == 1) {
+                cell.eventImage.image = UIImage(named: "opeing")
+            }
+            
+            if(indexPath.row == 2) {
+                cell.eventImage.image = UIImage(named: "public")
+            }
         }
         
         return cell
     }
+    
     
     
     
@@ -134,12 +174,13 @@ extension HomeVC: UICollectionViewDataSource {
         
         if let event = eventsResponse?.categories?[category[indexPath.section]]?.events?[indexPath.row] {
             let eventId = "\(event.id ?? 1)"
-            let organiser = event.organizer
-            
-            let vc = storyboard?.instantiateViewController(withIdentifier: "EventDetailVC") as! EventDetailVC
-            vc.eventIdStr = eventId
-            vc.organiserDetail = organiser
-            navigationController?.pushViewController(vc, animated: true)
+            //  let organiser = event.organizer
+              
+              let vc = storyboard?.instantiateViewController(withIdentifier: "EventDetailVC") as! EventDetailVC
+              vc.eventIdStr = eventId
+             // vc.organiserDetail = organiser
+              vc.eventDetails = event.data ?? []
+              navigationController?.pushViewController(vc, animated: true)
         }
     }
 
