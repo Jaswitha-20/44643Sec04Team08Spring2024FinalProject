@@ -69,9 +69,75 @@ class FavouriteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             return cell
         }
     
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        <#code#>
+//    }
+    
+    
+    
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (action, view, completion) in
+//            guard let self = self else { return }
+//            
+//            let eventRecord = self.eventRecord[indexPath.row]
+//            
+//            // Delete the event from Firestore
+//            Firestore.firestore().collection("favoriteEvents").document(eventRecord.id).delete { error in
+//                if let error = error {
+//                    print("Error deleting event: \(error.localizedDescription)")
+//                    completion(false)
+//                    return
+//                }
+//                
+//                // Remove the event from the local array
+//                self.eventRecord.remove(at: indexPath.row)
+//                tableView.deleteRows(at: [indexPath], with: .automatic)
+//                
+//                // Update UI
+//                tableView.isHidden = self.eventRecord.count != 0
+//                self.noData.isHidden = !tableView.isHidden
+//                
+//                completion(true)
+//            }
+//        }
+//        
+//        return UISwipeActionsConfiguration(actions: [deleteAction])
+//    }
+    
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        <#code#>
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (action, view, completion) in
+            guard let self = self else { return }
+            
+            let eventRecord = self.eventRecord[indexPath.row]
+            FireStoreManager.shared.removeFavoriteEvent(eventDetail: eventRecord) { success in
+                if success {
+                    // Remove the event from the local array
+                    self.eventRecord.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                    
+                    // Update UI
+                    tableView.isHidden = self.eventRecord.count != 0 ? false : true
+                    self.noData.isHidden = self.eventRecord.count != 0 ? true : false
+                } else {
+                    // Show an error message
+                    print("Failed to remove event from favorites")
+                }
+            }
+            
+            completion(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+
+
+
+    
+    
+    
+    
+    
 
         // MARK: - UITableViewDelegate
 

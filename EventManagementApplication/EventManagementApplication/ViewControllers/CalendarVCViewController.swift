@@ -104,7 +104,7 @@ class CalendarVCViewController: UIViewController, FSCalendarDelegate, FSCalendar
            
            let selectedDate = Calendar.current.startOfDay(for: date)
            if let events = eventsForDate[selectedDate], let event = events.first {
-               eventDetailsLabel.text = "Event: \(event.title)\nDetails: \(event.Details)"
+            //   eventDetailsLabel.text = "Event: \(event.title)\nDetails: \(event.Details)"
                var eventDetails = ""
                for event in events {
                               print("Event: \(event.title)")

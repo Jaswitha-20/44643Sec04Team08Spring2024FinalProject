@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U4x-XM-gCe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U4x-XM-gCe">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1493,7 +1493,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="R0P-AY-8Un">
-                                <rect key="frame" x="10" y="123" width="373" height="400"/>
+                                <rect key="frame" x="10" y="123" width="373" height="505"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CM-7I-F7z">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="40"/>
@@ -1772,6 +1772,45 @@
                                             <constraint firstAttribute="bottom" secondItem="8BJ-HJ-UWS" secondAttribute="bottom" constant="5" id="lzQ-rL-wb8"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-fX-qaH">
+                                        <rect key="frame" x="0.0" y="405" width="373" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-E1-c0u">
+                                                <rect key="frame" x="96.666666666666686" y="45" width="180" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="PVI-t5-kAC"/>
+                                                    <constraint firstAttribute="width" constant="180" id="Ssw-l8-SMw"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Logout">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <buttonConfiguration key="configuration" style="plain" title="Update" cornerStyle="capsule">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onLogout:" destination="Uoh-ls-1ld" eventType="touchUpInside" id="lh2-A1-2VU"/>
+                                                    <action selector="onSignUp:" destination="jcd-cn-L3F" eventType="touchUpInside" id="jom-Lm-ukp"/>
+                                                    <action selector="onUpdate:" destination="Uoh-ls-1ld" eventType="touchUpInside" id="jUf-9j-Stv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Tx8-E1-c0u" firstAttribute="centerX" secondItem="dBC-fX-qaH" secondAttribute="centerX" id="NMi-N3-tD2"/>
+                                            <constraint firstAttribute="height" constant="100" id="dME-SE-Y0r"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tx8-E1-c0u" secondAttribute="bottom" constant="5" id="xfb-Zo-JrK"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -1789,6 +1828,7 @@
                         <outlet property="firstname" destination="9DE-9a-hnA" id="xvk-Qc-V95"/>
                         <outlet property="lastName" destination="hdK-Tk-7rN" id="hdQ-PA-e6N"/>
                         <outlet property="phone" destination="1cu-g2-YuM" id="tjJ-7E-qGd"/>
+                        <outlet property="updateButton" destination="Tx8-E1-c0u" id="niS-h6-ac0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDP-bt-F8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

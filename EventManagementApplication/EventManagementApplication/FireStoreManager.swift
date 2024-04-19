@@ -203,6 +203,52 @@ class FireStoreManager {
         }
     }
     
+    func removeFavoriteEvent(eventDetail: EventDetailData, completion: @escaping (Bool) -> Void) {
+        let userId = UserDefaultsManager.shared.getDocumentId()
+        let documentReference = db.collection("FavouriteEvent").document(userId)
+        
+        // Convert EventDetailData to a dictionary
+        let organizerData: [String: Any] = [
+            "name": eventDetail.organizer?.name ?? "",
+            "email": eventDetail.organizer?.email ?? "",
+            "contact": eventDetail.organizer?.contact ?? "",
+            "address": eventDetail.organizer?.address ?? "",
+            "inField": eventDetail.organizer?.inField ?? "",
+            "eventsDone": eventDetail.organizer?.eventsDone ?? 0,
+            "rating": eventDetail.organizer?.rating ?? 0.0
+        ]
+        
+        let eventData: [String: Any] = [
+            "event_title": eventDetail.event_title ?? "",
+            "description": eventDetail.description ?? "",
+            "date": eventDetail.date ?? "",
+            "location": eventDetail.location ?? "",
+            "guests_allowed": eventDetail.guests_allowed ?? 0,
+            "price": eventDetail.price ?? "",
+            "organizer": organizerData
+        ]
+        
+        let removeEventData = [eventData]
+        
+        let removeData: [String: Any] = [
+            "events": FieldValue.arrayRemove(removeEventData)
+        ]
+        
+        // Remove the event data from the "events" array field
+        documentReference.updateData(removeData) { error in
+            if let error = error {
+                print("Error removing event from favorites: \(error)")
+                completion(false)
+            } else {
+                print("Event removed from favorites successfully")
+                completion(true)
+            }
+        }
+    }
+
+
+    
+    
     func addInFavorite(favBool: Bool, eventDetail: EventDetailData, organiser: Organizer, completion: @escaping (Bool) -> Void) {
         let userId = UserDefaultsManager.shared.getDocumentId()
         let documentReference = db.collection("FavouriteEvent").document(userId)
