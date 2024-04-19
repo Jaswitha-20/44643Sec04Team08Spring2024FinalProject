@@ -2386,7 +2386,18 @@
                             <constraint firstItem="zgS-8t-meb" firstAttribute="centerX" secondItem="QL4-Hu-MXG" secondAttribute="centerX" id="wdJ-2m-D6B"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PVR-rf-WFE"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PVR-rf-WFE">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="YVG-OS-wqB">
+                            <connections>
+                                <action selector="shareButton:" destination="Tdl-XD-Jte" id="NCU-YZ-dyn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="shareBtn" destination="YVG-OS-wqB" id="yEk-lE-AEh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5Q-FG-zWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2523,6 +2534,7 @@
         <image name="personal" width="275" height="183"/>
         <image name="setting" width="25" height="25"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <image name="timer" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

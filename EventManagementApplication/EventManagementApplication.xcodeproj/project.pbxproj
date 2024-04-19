@@ -258,6 +258,7 @@
 				8033E3A42BCAF0E500C50362 /* ForgotPasswordVC.swift */,
 				86809B2E2BD0B324004A54D9 /* FavouriteVC.swift */,
 				8033E3A52BCAF0E500C50362 /* LoginVC.swift */,
+				86809B282BD0B2E5004A54D9 /* EventBookingVC.swift */,
 				51821F1A2BD033F80093E323 /* BaseViewController.swift */,
 				86809B2C2BD0B30D004A54D9 /* EventHistoryVC.swift */,
 				51821F1B2BD033F80093E323 /* EventDetailVC.swift */,
@@ -265,7 +266,6 @@
 				7C70F0802BD0A88700FB22E9 /* HomeVC.swift */,
 				86809B322BD0B44A004A54D9 /* BookingConfirmationVC.swift */,
 				51821F1C2BD033F90093E323 /* SettingVC.swift */,
-				86809B282BD0B2E5004A54D9 /* EventBookingVC.swift */,
 				8033E3A62BCAF0E500C50362 /* SignUpVC.swift */,
 				7C70F0852BD0AC8700FB22E9 /* CalendarVCViewController.swift */,
 			);

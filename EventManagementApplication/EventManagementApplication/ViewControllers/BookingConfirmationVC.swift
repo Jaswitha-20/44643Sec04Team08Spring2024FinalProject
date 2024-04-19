@@ -10,6 +10,9 @@ import AnimatedGradientView
 
 class BookingConfirmationVC: UIViewController {
 
+    var eventDetails: String = "Event details to share"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
@@ -21,6 +24,22 @@ class BookingConfirmationVC: UIViewController {
                 view.addSubview(animatedGradient)
                 view.sendSubviewToBack(animatedGradient)
     }
+    
+    
+    
+    @IBAction func shareButton(_ sender: UIBarButtonItem) {
+        
+        // Create an activity view controller with the event details
+                let activityViewController = UIActivityViewController(activityItems: [eventDetails], applicationActivities: nil)
+                // Present the activity view controller
+                present(activityViewController, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+    
+    @IBOutlet weak var shareBtn: UIBarButtonItem!
     
     @IBAction func onBooking(_ sender: Any) {
         SceneDelegate.shared?.loginCheckOrRestart()
