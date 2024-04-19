@@ -15,7 +15,14 @@ class FavouriteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let animatedGradient = AnimatedGradientView(frame: view.bounds)
+                animatedGradient.direction = .up
+                animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
+                                                    (colors: ["#F5A9D0", "#2ECCFA", "#BEF781"], .right, .axial),
+                                                    (colors: ["#ECE0F8", "#819FF7"], .down, .axial),
+                                                    (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
+                view.addSubview(animatedGradient)
+                view.sendSubviewToBack(animatedGradient)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
@@ -75,28 +82,32 @@ class FavouriteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     
                     
                     let event = getEvent(selectedId: eventRecord.organizerId!)
-                   
+                    DispatchQueue.main.async {
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
+                        
+                        vc.eventData = event
+                      
+                        vc.isHistory = true
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        
+                    }
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
-                    
-                    vc.eventData = event
                   
-                    vc.isHistory = true
-                    self.navigationController?.pushViewController(vc, animated: true)
-                    
                 })
             }else {
-                
-                
-                let event = getEvent(selectedId: eventRecord.organizerId!)
-               
-                
-                let vc = storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
-                
-                vc.eventData = event
-              
-                vc.isHistory = true
-                navigationController?.pushViewController(vc, animated: true)
+                DispatchQueue.main.async {
+                if  let event = getEvent(selectedId: eventRecord.organizerId!)
+                    {
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
+                        
+                        vc.eventData = event
+                      
+                        vc.isHistory = true
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    } else {
+                        // Handle the case where myOptionalValue is nil
+                    }
+                }
                 
                 
             }

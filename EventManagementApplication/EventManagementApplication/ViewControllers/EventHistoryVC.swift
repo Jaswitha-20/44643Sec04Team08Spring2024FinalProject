@@ -81,28 +81,28 @@ class EventHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                       
                       let event = getEvent(selectedId: eventRecord.organizerId!)
                      
-                      
-                      let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
-                      
-                      vc.eventData = event
-                    
-                      vc.isHistory = true
-                      self.navigationController?.pushViewController(vc, animated: true)
-                      
+                      DispatchQueue.main.async {
+                          let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
+                          
+                          vc.eventData = event
+                          
+                          vc.isHistory = true
+                          self.navigationController?.pushViewController(vc, animated: true)
+                      }
                   })
               }else {
                   
                   
                   let event = getEvent(selectedId: eventRecord.organizerId!)
-                 
-                  
-                  let vc = storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
-                  
-                  vc.eventData = event
-                
-                  vc.isHistory = true
-                  navigationController?.pushViewController(vc, animated: true)
-                  
+                  DispatchQueue.main.async {
+                      
+                      let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventBookingVC") as! EventBookingVC
+                      
+                      vc.eventData = event
+                      
+                      vc.isHistory = true
+                      self.navigationController?.pushViewController(vc, animated: true)
+                  }
                   
               }
               
