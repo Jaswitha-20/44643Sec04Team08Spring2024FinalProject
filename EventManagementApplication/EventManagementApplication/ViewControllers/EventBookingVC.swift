@@ -129,7 +129,7 @@ class EventBookingVC: UIViewController, ImageSlideshowDelegate {
             self.date.isUserInteractionEnabled = false
             self.locationButton.isUserInteractionEnabled = false
         } else {
-            globalAlart(message: "You can update Event Date and Location")
+            globalAlart(message: "You can update Event Date, Time Duration and Location")
         }
         
         self.eventName.text = eventData?.organizerName
@@ -199,10 +199,8 @@ class EventBookingVC: UIViewController, ImageSlideshowDelegate {
                     self.addEventToCalendar(eventDetail: self.eventData!) { successBool, error in
                         if successBool {
                             globalAlart(message: "Event Booking Confirmed. The event has been added to your calendar.")
-                            DispatchQueue.main.async {
-                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookingConfirmationVC") as! BookingConfirmationVC
-                                self.navigationController?.pushViewController(vc, animated: true)
-                            }
+                     
+                            self.performSegue(withIdentifier: "BookingToConfirm", sender: nil)
                         }
                     }
                 }
@@ -383,5 +381,21 @@ extension EventBookingVC {
         @objc func cancelDatePicker() {
             self.view.endEditing(true)
         }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "BookingToConfirm" {
+            if let vc = segue.destination as? BookingConfirmationVC {
+                let value = UserDefaults.standard.string(forKey: "EventType")
+                        vc.eventTitle = value!
+                        vc.location = (self.location.text)!
+                        vc.date = (self.eventData?.date)!
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "HH:mm"
+                let startTimeString = dateFormatter.string(from: self.startTime!)
+            let endTimeString = dateFormatter.string(from: self.endTime!)
+          vc.time = startTimeString + "-" + endTimeString
+            }
+        }
+    }
 
 }

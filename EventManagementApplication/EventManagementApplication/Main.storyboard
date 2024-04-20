@@ -2266,7 +2266,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onBooking:" destination="6Xi-Uc-coy" eventType="touchUpInside" id="yxE-Uy-Dzj"/>
-                                            <segue destination="Tdl-XD-Jte" kind="show" id="Frj-ql-tES"/>
+                                            <segue destination="Tdl-XD-Jte" kind="show" identifier="BookingToConfirm" id="Frj-ql-tES"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMS-QE-col" customClass="ButtonLayerSetup" customModule="EventManagementApplication" customModuleProvider="target">

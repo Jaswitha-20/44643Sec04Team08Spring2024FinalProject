@@ -171,8 +171,10 @@ extension HomeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let category = eventsResponse?.categories?.keys.sorted() else { return }
-        
+      //  print(category)
         if let event = eventsResponse?.categories?[category[indexPath.section]]?.events?[indexPath.row] {
+            // print(event.title as Any)
+            UserDefaults.standard.set(event.title, forKey: "EventType")
             let eventId = "\(event.id ?? 1)"
             //  let organiser = event.organizer
               
