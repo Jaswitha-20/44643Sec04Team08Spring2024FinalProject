@@ -12,6 +12,8 @@ import AnimatedGradientView
 import ImageSlideshow
 import ImageSlideshowSDWebImage
 import SDWebImage
+import AVFoundation
+
 
 class EventBookingVC: UIViewController, ImageSlideshowDelegate {
     @IBOutlet var termButton: UIButton!
@@ -228,6 +230,7 @@ class EventBookingVC: UIViewController, ImageSlideshowDelegate {
                 self.favEventBool = newFavState
                 let message = newFavState ? "Favorite added" : "Favorite removed"
                 showAlertView(message: message)
+                AudioServicesPlaySystemSound(SystemSoundID(1103))
             }
         }
     }

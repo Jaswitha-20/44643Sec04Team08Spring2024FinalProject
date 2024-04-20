@@ -7,6 +7,7 @@
 
 import UIKit
 import AnimatedGradientView
+import AVFoundation
 
 class LoginVC: UIViewController {
     
@@ -46,6 +47,7 @@ class LoginVC: UIViewController {
             FireStoreManager.shared.login(email: email.text?.lowercased() ?? "", password: password.text ?? "") { success in
                 if success{
                     SceneDelegate.shared?.loginCheckOrRestart()
+                    AudioServicesPlaySystemSound(1105)
                 }
                 
             }

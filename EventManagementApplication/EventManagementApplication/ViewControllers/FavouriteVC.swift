@@ -7,6 +7,7 @@
 
 import UIKit
 import AnimatedGradientView
+import AVFoundation
 
 class FavouriteVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -135,6 +136,7 @@ func getEvent(selectedId:Int)->EventData? {
 extension FavouriteVC {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            AudioServicesPlaySystemSound(SystemSoundID(1152))
             let eventToDelete = eventRecord[indexPath.row]
             FireStoreManager.shared.deleteFavoriteEvent(eventToDelete) { success in
                 if success {

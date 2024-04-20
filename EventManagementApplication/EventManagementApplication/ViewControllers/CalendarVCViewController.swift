@@ -9,6 +9,7 @@ import UIKit
 import FSCalendar
 import EventKit
 import AnimatedGradientView
+import AVFoundation
 
 struct YourEventType {
     var title: String
@@ -120,6 +121,7 @@ class CalendarVCViewController: UIViewController, FSCalendarDelegate, FSCalendar
                    eventDetails += "Event: \(event.title)" + "\n" + "Details: \(event.Details)" + "\n"
                           }
                let alertController = UIAlertController(title: "All Events", message: eventDetails, preferredStyle: .alert)
+               AudioServicesPlaySystemSound(SystemSoundID(1306))
                      let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
                      }
                      alertController.addAction(okAction)

@@ -7,6 +7,8 @@
 
 import UIKit
 import AnimatedGradientView
+import AVFoundation
+
 
 class SettingVC: BaseViewController {
     @IBOutlet weak var firstname: UITextField!
@@ -53,9 +55,11 @@ class SettingVC: BaseViewController {
         UserDefaultsManager.shared.clearUserDefaults()
         UserDefaults.standard.removeObject(forKey: "documentId")
         SceneDelegate.shared!.loginCheckOrRestart()
+        AudioServicesPlaySystemSound(SystemSoundID(1305))
     }
 
     @IBAction func onUpdate(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(SystemSoundID(1159))
             let documentid = UserDefaultsManager.shared.getDocumentId()
         let userData = UserRegistrationModel(firstname: self.firstname?.text, lastname: self.lastName?.text, email: self.email?.text, phone: self.phone?.text, password: self.password)
         FireStoreManager.shared.updateProfile(documentID: documentid, user: userData) { success in
