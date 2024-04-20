@@ -132,3 +132,20 @@ func getEvent(selectedId:Int)->EventData? {
     
     return nil
 }
+extension FavouriteVC {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let eventToDelete = eventRecord[indexPath.row]
+            FireStoreManager.shared.deleteFavoriteEvent(eventToDelete) { success in
+                if success {
+                    self.eventRecord.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                    self.tableView.isHidden = self.eventRecord.isEmpty
+                    self.noData.isHidden = !self.eventRecord.isEmpty
+                } else {
+                    // Handle error
+                }
+            }
+        }
+    }
+}

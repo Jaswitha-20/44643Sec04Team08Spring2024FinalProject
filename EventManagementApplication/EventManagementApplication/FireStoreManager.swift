@@ -314,6 +314,30 @@ class FireStoreManager {
              }
          }
      }
+    
+    func deleteFavoriteEvent(_ eventDetail: EventData, completion: @escaping (Bool) -> Void) {
+        let userId = UserDefaultsManager.shared.getDocumentId()
+        let documentReference = db.collection("FavouriteEvent").document(userId)
+
+        let meetingData: [String: Any] = [
+            "organizerId": eventDetail.organizerId ?? 0,
+            "organizerName": eventDetail.organizerName ?? "",
+            "date": eventDetail.date ?? "",
+            "location": eventDetail.location ?? "",
+            "userId": userId,
+        ]
+
+        documentReference.updateData(["events": FieldValue.arrayRemove([meetingData])]) { error in
+            if let error = error {
+                print("Error updating favorites: \(error)")
+                completion(false)
+            } else {
+                print("Event removed from favorites successfully")
+                completion(true)
+            }
+        }
+    }
+
 
 
      

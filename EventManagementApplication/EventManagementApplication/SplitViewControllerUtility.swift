@@ -1,8 +1,8 @@
 //
 //  SplitViewControllerUtility.swift
-//  LMCS
 //
-//  Created by Macbook-Pro on 12/04/24.
+//
+//  Created by Jaswitha Kaliliri
 //
 
 import Foundation

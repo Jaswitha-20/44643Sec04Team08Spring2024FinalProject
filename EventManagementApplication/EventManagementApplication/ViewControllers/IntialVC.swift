@@ -11,7 +11,7 @@ import AnimatedGradientView
 
 class IntialVC: UIViewController {
     
-    @IBOutlet var ReceipeAnimation: UIView!
+    @IBOutlet var LottieAnimation: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +20,14 @@ class IntialVC: UIViewController {
         lottieView.loopMode = .loop
         lottieView.contentMode = .scaleAspectFit
 
-        ReceipeAnimation.addSubview(lottieView)
+        LottieAnimation.addSubview(lottieView)
         
         lottieView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            lottieView.topAnchor.constraint(equalTo: ReceipeAnimation.topAnchor),
-            lottieView.leadingAnchor.constraint(equalTo: ReceipeAnimation.leadingAnchor),
-            lottieView.trailingAnchor.constraint(equalTo: ReceipeAnimation.trailingAnchor),
-            lottieView.bottomAnchor.constraint(equalTo: ReceipeAnimation.bottomAnchor)
+            lottieView.topAnchor.constraint(equalTo: LottieAnimation.topAnchor),
+            lottieView.leadingAnchor.constraint(equalTo: LottieAnimation.leadingAnchor),
+            lottieView.trailingAnchor.constraint(equalTo: LottieAnimation.trailingAnchor),
+            lottieView.bottomAnchor.constraint(equalTo: LottieAnimation.bottomAnchor)
         ])
 
         lottieView.play()
@@ -45,7 +45,7 @@ class IntialVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let animationView = ReceipeAnimation.subviews.first as? LottieAnimationView {
+        if let animationView = LottieAnimation.subviews.first as? LottieAnimationView {
             animationView.play()
         }
     }
