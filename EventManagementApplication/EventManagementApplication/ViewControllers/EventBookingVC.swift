@@ -30,7 +30,9 @@ class EventBookingVC: UIViewController, ImageSlideshowDelegate {
     
     @IBOutlet weak var slideShow: ImageSlideshow!
     
-      var rememberMe: Bool = false
+    @IBOutlet weak var guestAllowed: UILabel!
+    @IBOutlet weak var ratingAndEventsDone: UILabel!
+    var rememberMe: Bool = false
       var eventData : EventData?
      // var organiserDetail: Organizer?
       var favEventBool = false
@@ -141,6 +143,13 @@ class EventBookingVC: UIViewController, ImageSlideshowDelegate {
         self.organiserEmail.text = "Email : \(eventData?.email ?? "")"
         self.organiserContact.text = "Contact : \(eventData?.contact ?? "")"
         self.organiserAddress.text = "Address : \(eventData?.address ?? "")"
+        
+        if let rating = eventData?.rating {
+            self.ratingAndEventsDone.text = "Rating: \(String(describing: eventData?.rating ?? 0.0))"
+        } else {
+            self.ratingAndEventsDone.text = "Rating: Not available"
+        }
+        
         
         self.requestCalendarPermission { sucess in
             if sucess{
@@ -391,8 +400,8 @@ extension EventBookingVC {
                         vc.date = (self.eventData?.date)!
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "HH:mm"
-                let startTimeString = dateFormatter.string(from: self.startTime!)
-            let endTimeString = dateFormatter.string(from: self.endTime!)
+                let startTimeString = dateFormatter.string(from: self.startTime ?? Date(timeIntervalSinceReferenceDate: 0))
+            let endTimeString = dateFormatter.string(from: self.endTime ?? Date(timeIntervalSinceReferenceDate: 0))
           vc.time = startTimeString + "-" + endTimeString
             }
         }

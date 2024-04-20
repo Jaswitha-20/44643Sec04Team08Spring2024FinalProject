@@ -1289,9 +1289,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Event History Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INS-ZN-76B">
-                                <rect key="frame" x="175" y="415" width="180" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Event History Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INS-ZN-76B">
+                                <rect key="frame" x="100" y="415" width="193" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1432,9 +1431,13 @@
                         <viewLayoutGuide key="safeArea" id="mzO-qK-hN9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mzO-qK-hN9" firstAttribute="trailing" secondItem="INS-ZN-76B" secondAttribute="trailing" constant="100" id="Aao-IO-oQx"/>
                             <constraint firstItem="vRV-wA-Afr" firstAttribute="top" secondItem="mzO-qK-hN9" secondAttribute="top" constant="10" id="Jaa-G3-ncA"/>
                             <constraint firstItem="vRV-wA-Afr" firstAttribute="leading" secondItem="mzO-qK-hN9" secondAttribute="leading" constant="10" id="ZFd-vW-D2X"/>
+                            <constraint firstItem="INS-ZN-76B" firstAttribute="leading" secondItem="mzO-qK-hN9" secondAttribute="leading" constant="100" id="aD0-n6-P2N"/>
+                            <constraint firstItem="INS-ZN-76B" firstAttribute="centerY" secondItem="as2-wY-434" secondAttribute="centerY" id="ihA-di-Jih"/>
                             <constraint firstItem="mzO-qK-hN9" firstAttribute="bottom" secondItem="vRV-wA-Afr" secondAttribute="bottom" constant="10" id="kjZ-yD-o2S"/>
+                            <constraint firstItem="INS-ZN-76B" firstAttribute="top" secondItem="mzO-qK-hN9" secondAttribute="top" constant="312" id="qcU-yt-2LZ"/>
                             <constraint firstItem="mzO-qK-hN9" firstAttribute="trailing" secondItem="vRV-wA-Afr" secondAttribute="trailing" constant="10" id="xhc-Gt-TuX"/>
                         </constraints>
                     </view>
@@ -2192,8 +2195,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-ck-jqU">
-                                <rect key="frame" x="10" y="441.66666666666669" width="373" height="146.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-ck-jqU">
+                                <rect key="frame" x="10" y="441.66666666666669" width="373" height="140.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name : Annie Jain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClV-a1-Exh">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="21.666666666666668"/>
@@ -2202,19 +2205,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email : Anniejain@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMB-DZ-Vl1">
-                                        <rect key="frame" x="0.0" y="41.666666666666629" width="373" height="21.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="29.666666666666629" width="373" height="21.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact : 9819823887" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7U-kV-NYg">
-                                        <rect key="frame" x="0.0" y="83.333333333333314" width="373" height="21.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="59.333333333333307" width="373" height="21.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address : Maryville" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GX-zI-Z8E">
-                                        <rect key="frame" x="0.0" y="124.99999999999996" width="373" height="21.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="88.999999999999943" width="373" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 4.9" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJg-os-5rG">
+                                        <rect key="frame" x="0.0" y="118.6666666666667" width="373" height="21.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2222,7 +2231,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvR-Ge-A1h" customClass="ButtonLayerSetup" customModule="EventManagementApplication" customModuleProvider="target">
-                                <rect key="frame" x="10" y="618.33333333333337" width="196.33333333333334" height="45"/>
+                                <rect key="frame" x="10" y="612" width="196.33333333333334" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="gnR-Oh-nB5"/>
@@ -2243,7 +2252,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bey-vs-JFj">
-                                <rect key="frame" x="20" y="713.33333333333337" width="353" height="50"/>
+                                <rect key="frame" x="20" y="707" width="353" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-az-35b" customClass="ButtonLayerSetup" customModule="EventManagementApplication" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
@@ -2329,6 +2338,7 @@
                         <outlet property="organiserEmail" destination="lMB-DZ-Vl1" id="GIJ-6I-QIU"/>
                         <outlet property="organiserName" destination="ClV-a1-Exh" id="BqL-wp-JVC"/>
                         <outlet property="price" destination="jbG-Ge-gHA" id="pBD-Ic-R3s"/>
+                        <outlet property="ratingAndEventsDone" destination="sJg-os-5rG" id="WYs-jX-V85"/>
                         <outlet property="slideShow" destination="Gdv-aA-fhC" id="TWI-dF-adk"/>
                         <outlet property="termButton" destination="KvR-Ge-A1h" id="zkd-BQ-nk0"/>
                         <outlet property="time" destination="beB-sY-ejj" id="koO-4f-qLV"/>
