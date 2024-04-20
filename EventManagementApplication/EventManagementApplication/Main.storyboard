@@ -1828,7 +1828,7 @@
             </objects>
             <point key="canvasLocation" x="3389" y="-1970"/>
         </scene>
-        <!--Event Detail-->
+        <!--Event Organizers-->
         <scene sceneID="jBV-Cj-7wx">
             <objects>
                 <viewController storyboardIdentifier="EventDetailVC" id="VHx-5u-vly" customClass="EventDetailVC" customModule="EventManagementApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -1958,11 +1958,11 @@
                                     <constraint firstItem="eDr-3v-Ly2" firstAttribute="centerX" secondItem="AVC-wE-lQK" secondAttribute="centerX" id="eBb-RZ-7e3"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2A-J2-ljH" userLabel="Filter">
-                                <rect key="frame" x="20" y="283" width="200" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2A-J2-ljH" userLabel="AvailableOrganizers">
+                                <rect key="frame" x="20" y="283" width="250" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Ehm-0x-WFS"/>
+                                    <constraint firstAttribute="width" constant="250" id="Ehm-0x-WFS"/>
                                     <constraint firstAttribute="height" constant="50" id="sky-MX-n0J"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1994,9 +1994,10 @@
                             <constraint firstItem="AVC-wE-lQK" firstAttribute="top" secondItem="aOM-HR-GDx" secondAttribute="top" constant="20" id="gdQ-1H-JMA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Event Detail" id="gsu-qD-BNB"/>
+                    <navigationItem key="navigationItem" title="Event Organizers" id="gsu-qD-BNB"/>
                     <connections>
                         <outlet property="collectionView" destination="F0P-2A-aKc" id="oB7-h5-r7C"/>
+                        <outlet property="showEventType" destination="D2A-J2-ljH" id="mxg-lO-keh"/>
                         <segue destination="6Xi-Uc-coy" kind="show" id="XGj-lp-FTP"/>
                     </connections>
                 </viewController>

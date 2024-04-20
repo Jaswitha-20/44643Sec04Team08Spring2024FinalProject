@@ -11,6 +11,7 @@ import SDWebImage
 
 class EventDetailVC: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var showEventType: UIButton!
     var eventIdStr = ""
     var eventDetails: [EventData] = []
 
@@ -18,6 +19,8 @@ class EventDetailVC: UIViewController, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let value = UserDefaults.standard.string(forKey: "EventType")
+        self.showEventType.setTitle(value! + " Organizers", for: .normal) 
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
                 animatedGradient.direction = .up
                 animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
