@@ -15,22 +15,37 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var password: UITextField!
     
+    var animatedGradient: AnimatedGradientView!
     var rememberMe: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Create the animated gradient view
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
-                animatedGradient.direction = .up
-                animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
-                                                    (colors: ["#F5A9D0", "#2ECCFA", "#BEF781"], .right, .axial),
-                                                    (colors: ["#ECE0F8", "#819FF7"], .down, .axial),
-                                                    (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
-                view.addSubview(animatedGradient)
-                view.sendSubviewToBack(animatedGradient)
+        animatedGradient.direction = .up
+        animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
+                                            (colors: ["#F5A9D0", "#2ECCFA", "#BEF781"], .right, .axial),
+                                            (colors: ["#ECE0F8", "#819FF7"], .down, .axial),
+                                            (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
         
+        // Add the animated gradient view to the view hierarchy
+        view.addSubview(animatedGradient)
+        view.sendSubviewToBack(animatedGradient)
+        
+        // Set up autoresizing mask to resize with the superview
+        animatedGradient.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-    
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        // Update the frame of the animated gradient view when the device rotates
+        coordinator.animate(alongsideTransition: { _ in
+            self.animatedGradient?.frame = CGRect(origin: CGPoint.zero, size: size)
+        }, completion: nil)
+    }
+
 
     
     @IBAction func onLogin(_ sender: Any) {

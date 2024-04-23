@@ -14,21 +14,36 @@ class FavouriteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var noData: UILabel!
     var eventRecord: [EventData] = []
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let animatedGradient = AnimatedGradientView(frame: view.bounds)
-                animatedGradient.direction = .up
-                animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
-                                                    (colors: ["#F5A9D0", "#2ECCFA", "#BEF781"], .right, .axial),
-                                                    (colors: ["#ECE0F8", "#819FF7"], .down, .axial),
-                                                    (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
-                view.addSubview(animatedGradient)
-                view.sendSubviewToBack(animatedGradient)
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
-       
-    }
+    var animatedGradient: AnimatedGradientView!
+
+      override func viewDidLoad() {
+          super.viewDidLoad()
+          
+          // Create the animated gradient view
+          animatedGradient = AnimatedGradientView(frame: view.bounds)
+          animatedGradient.direction = .up
+          animatedGradient.animationValues = [(colors: ["#A9F5F2", "#F5F6CE"], .up, .axial),
+                                              (colors: ["#F5A9D0", "#2ECCFA", "#BEF781"], .right, .axial),
+                                              (colors: ["#ECE0F8", "#819FF7"], .down, .axial),
+                                              (colors: ["#58FAF4", "#F4FA58", "#A9A9F5"], .left, .axial)]
+          
+          // Add the animated gradient view to the view hierarchy
+          view.addSubview(animatedGradient)
+          view.sendSubviewToBack(animatedGradient)
+          
+          // Set up the table view
+          tableView.delegate = self
+          tableView.dataSource = self
+      }
+    
+    
+    override func viewDidLayoutSubviews() {
+           super.viewDidLayoutSubviews()
+           
+           // Update the frame of the animated gradient view to cover the entire screen
+           animatedGradient.frame = view.bounds
+       }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
